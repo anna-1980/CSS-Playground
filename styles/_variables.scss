@@ -1,0 +1,22 @@
+$primary-color: rgb(1, 225, 255);
+$secondary:rgb(66, 138, 37);
+$dark-color: rgb(3, 28, 44);
+$bright-color2: rgb(213, 229, 238);
+$green-bright: rgb(167, 215, 204);
+$green-dark: rgb(43, 87, 87);
+
+$gradient1-start: rgb(23, 50, 109);
+$gradient1-middle: rgb(175, 63, 185);
+$gradient1-stop: rgb(230, 230, 92);
+
+$buttonSize: 2.5rem;
+$buttonPadding: 0.5rem 1rem;
+
+
+
+@mixin flex($column, $justify, $align) {
+    display: flex;
+    flex-direction: $column;
+    justify-content: $justify;
+    align-items: $align;
+  }

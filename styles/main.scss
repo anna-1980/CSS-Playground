@@ -1,0 +1,26 @@
+@import "variables.scss";
+@import "buttons.scss";
+@import "navi.scss";
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    background-color: rgb(255, 255, 255);
+}
+
+.container {
+    height: 50rem;
+    width: 80%;
+    background-color: rgb(220, 226, 233);
+    margin: auto;
+    position: relative;
+}
+
+
+
