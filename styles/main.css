@@ -1,7 +1,8 @@
 .buttons {
   height: content;
-  width: 80%;
+  width: content;
   margin: auto;
+  margin-top: 4rem;
   padding-bottom: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -53,8 +54,9 @@ button {
 
 .nav1 {
   width: 95%;
-  height: 10vw;
+  height: content;
   margin: 0.5rem;
+  padding: 0.5rem;
   background-color: #28285f;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -121,9 +123,10 @@ button {
 }
 
 .nav2 {
-  margin: 0.5rem;
   width: 95%;
-  height: 10vw;
+  height: content;
+  margin: 0.5rem;
+  padding: 0.5rem;
   background-color: #55414c;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -212,10 +215,11 @@ button {
 }
 
 .nav3 {
-  margin: 0.5rem;
-  background-image: linear-gradient(120deg, #720c72, #2b83cf, #720c72);
   width: 95%;
-  height: 10vw;
+  height: content;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  background-image: linear-gradient(120deg, #720c72, #2b83cf, #720c72);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -491,8 +495,9 @@ button {
 
 .nav4 {
   width: 95%;
-  height: 10vw;
+  height: content;
   margin: 0.5rem;
+  padding: 0.5rem;
   background-image: linear-gradient(160deg, #cfc9cf, #7e98af, #555455);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -868,7 +873,7 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 4rem;
+  height: 5rem;
   width: 100%;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -877,8 +882,7 @@ button {
           box-shadow: 2px 2px 8px #af3fb9;
 }
 
-.navMain .navigation {
-  width: content;
+.navigation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -892,19 +896,21 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
-.navMain .buttonNav {
+.buttonNav {
   background-color: transparent;
   border: none;
   color: #a7d7cc;
-  margin: 0rem 2rem;
+  margin: 0rem 1.5rem;
   padding: 0.2rem 0.5rem;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   cursor: pointer;
 }
 
-.navMain .buttonNav:hover {
+.buttonNav:hover {
   background-color: #a7d7cc;
   color: #2b5757;
   padding: 0.2rem 0.5rem;
@@ -912,17 +918,6 @@ button {
   border-radius: 20px;
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
-}
-
-.navMain .active {
-  background-color: #a7d7cc;
-  color: #2b5757;
-  padding: 0.2rem 0.5rem;
-  text-align: center;
-  border-radius: 20px;
-  font-size: 1.5rem;
-  -webkit-box-shadow: 2px 2px 10px #d5e5ee, -2px -2px 10px #d5e5ee;
-          box-shadow: 2px 2px 10px #d5e5ee, -2px -2px 10px #d5e5ee;
 }
 
 * {
@@ -934,14 +929,41 @@ button {
 
 html {
   font-size: 62.5%;
-  background-color: white;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(8%, #031c2c), color-stop(70%, #17326d), color-stop(130%, #af3fb9)) no-repeat;
+  background: linear-gradient(180deg, #031c2c 8%, #17326d 70%, #af3fb9 130%) no-repeat;
+  padding-bottom: 100vh;
 }
 
-.container {
-  height: 50rem;
-  width: 80%;
-  background-color: #dce2e9;
-  margin: auto;
-  position: relative;
+@media screen and (max-width: 360px) {
+  button {
+    margin: 0.5rem;
+    padding: 1rem;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+  }
+  .navMain {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+  .navigation {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+  .buttonNav {
+    border: 1px solid rgba(167, 215, 204, 0.5);
+    border-radius: 7px;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .buttons {
+    height: content;
+    width: 700px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

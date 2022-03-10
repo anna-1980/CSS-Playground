@@ -11,16 +11,60 @@
 
 html{
     font-size: 62.5%;
-    background-color: rgb(255, 255, 255);
+    background: linear-gradient(180deg, 
+    
+    $dark-color 8%, 
+    $gradient1-start 70%,
+    $gradient1-middle  130%, 
+
+    ) no-repeat;
+    padding-bottom: 100vh;
 }
 
-.container {
-    height: 50rem;
-    width: 80%;
-    background-color: rgb(220, 226, 233);
-    margin: auto;
-    position: relative;
+// .container {
+//     height: 50rem;
+//     width: 80%;
+//     background-color: rgb(220, 226, 233);
+//     margin: auto;
+//     position: relative;
+// }
+
+@media screen and (max-width: 360px) {
+    
+button{
+    margin: 0.5rem;
+    padding: 1rem;
+    font-size: 2rem; 
+    padding: 0.5rem 1rem;
 }
 
 
+    .navMain{
+       
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+    .navigation{
+       padding-top: 2rem;
+       padding-bottom: 2rem;
+       padding-right: 1rem;
+       padding-left: 1rem;
+    }
 
+    .buttonNav {
+    border: 1px solid rgba(167, 215, 204, 0.5);
+    border-radius: 7px;
+    font-size: 1.5rem;
+
+   }
+
+}
+
+@media screen and (min-width: 750px) {
+.buttons {
+    height: content;
+    width: 700px;
+}
+}
