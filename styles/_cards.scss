@@ -1,0 +1,75 @@
+$cardHeight: 16rem;
+$cardWidth: 12rem;
+$paddingLeft: 0.1rem;
+$paddingRight: 0.1rem;
+$borderRadius: 10px;
+
+.containerCards{
+  height: content;
+  width: 80%;
+  margin: auto;
+  margin-top: 4rem;
+  border: 2px solid rgb(212, 212, 212);
+  border-radius: 0px 20px 0px 20px;
+  @include flex(column, flex-start, flex-start);
+  background-color: rgb(255, 255, 255);
+  box-shadow: 5px 5px 10px black;
+  align-items: center;
+}
+
+.panel1{
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+  @include flex(row, space-around, flex-start);
+  border: 2px solid green;
+}
+
+.card1, .card2, .card3{
+  height: $cardHeight;
+  width: $cardWidth;
+  padding: $paddingLeft $paddingRight;
+  border-radius: 10px ;
+  border: 2px solid rgb(128, 0, 49);
+}
+
+.card1{
+   
+  background: green;
+  
+}
+.card2{
+  
+  background: rgb(54, 199, 54);
+  
+}
+.card3{
+ 
+  background: rgb(161, 235, 161);
+  
+}
+
+.panel2{
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+  @include flex(row, space-around, flex-start);
+  border: 2px solid rgb(252, 152, 3);
+}
+.panel3{
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+  @include flex(row, space-around, flex-start);
+  border: 2px solid rgb(22, 182, 245);
+}
+
+@media screen and (max-width: 360px) {
+  .card1, .card2, .card3{
+    height: 8rem;
+    width: 6rem;
+    padding: 0.1rem 0.1rem;
+    border-radius: $borderRadius;
+  }
+
+}

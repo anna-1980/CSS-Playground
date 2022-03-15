@@ -1,6 +1,7 @@
 @import "variables.scss";
 @import "buttons.scss";
 @import "navi.scss";
+@import "cards.scss";
 
 
 *{
@@ -159,6 +160,10 @@ button{
 }
 
 .container {
+    height: content;
+    width: 700px;
+}
+.containerCards {
     height: content;
     width: 700px;
 }
