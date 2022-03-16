@@ -150,12 +150,13 @@ button{
 
    }
   
-   .card1, .card2, .card3, .card4, .card5, .card6{
-    height: 14rem;
-    width: 10rem;
-    padding: $paddingLeft $paddingRight;
-    border-radius: 10px ;
-   }
+//    .card1, .card2, .card3, .card4, .card5, .card6{
+//     height: 14rem;
+//     width: 10rem;
+//     // padding: $paddingLeft $paddingRight;
+//     border-radius: 10px ;
+//     padding: 0.1rem 0.1rem;
+//    }
 
    .card1 > div{
     // background: rgba(76, 150, 76, 0.5);

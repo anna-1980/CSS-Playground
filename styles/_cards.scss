@@ -25,7 +25,7 @@ $borderRadius: 10px;
   width: 100%;
   padding: 1rem;
   @include flex(row, space-around, flex-start);
-  border: 2px solid green;
+  // border: 2px solid green;
 }
 
 .card1, .card2, .card3, .card4, .card5, .card6{
@@ -33,7 +33,7 @@ $borderRadius: 10px;
   width: $cardWidth;
   padding: $paddingLeft $paddingRight;
   border-radius: 10px ;
-  border: 2px solid rgb(128, 0, 49);
+  // border: 2px solid rgb(128, 0, 49);
   color: ivory;
   font-size: 1.5rem;
   @include flex(row, space-around, center);
@@ -265,7 +265,7 @@ $borderRadius: 10px;
   width: 100%;
   padding: 1rem;
   @include flex(row, space-around, flex-start);
-  border: 2px solid rgb(252, 152, 3);
+  // border: 2px solid rgb(252, 152, 3);
 }
 
 .card4 {
@@ -330,17 +330,18 @@ $borderRadius: 10px;
   width: 100%;
   padding: 1rem;
   @include flex(row, space-around, flex-start);
-  border: 2px solid rgb(22, 182, 245);
+  // border: 2px solid rgb(22, 182, 245);
 }
 
 
 
 
 @media screen and (max-width: 360px) {
-  .card1, .card2, .card3{
-    height: 8rem;
-    width: 6rem;
+  .card1, .card2, .card3, .card4, .card5, .card6{
+    height: 14rem;
+    width: 10rem;
     padding: 0.1rem 0.1rem;
+    margin: 0.2rem;
     border-radius: $borderRadius;
   }
 
