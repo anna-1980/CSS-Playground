@@ -993,24 +993,286 @@ button {
   border: 2px solid green;
 }
 
-.card1, .card2, .card3 {
+.card1, .card2, .card3, .card4, .card5, .card6 {
   height: 16rem;
   width: 12rem;
   padding: 0.1rem 0.1rem;
   border-radius: 10px;
   border: 2px solid #800031;
+  color: ivory;
+  font-size: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .card1 {
-  background: green;
+  position: relative;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#27526e), color-stop(#123e5c), color-stop(#062235), color-stop(#27526e), color-stop(#123e5c), to(#062235));
+  background-image: linear-gradient(to right bottom, #27526e, #123e5c, #062235, #27526e, #123e5c, #062235);
+  background-size: 400% 400%;
+  -webkit-perspective: 500px;
+          perspective: 500px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  overflow: hidden;
+}
+
+.card1:hover {
+  -webkit-animation: shades 5s ease forwards;
+          animation: shades 5s ease forwards;
+}
+
+@-webkit-keyframes shades {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes shades {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@-webkit-keyframes shades2 {
+  0% {
+    background-position: 96% 0%;
+  }
+  100% {
+    background-position: 50% 100%;
+  }
+}
+
+@keyframes shades2 {
+  0% {
+    background-position: 96% 0%;
+  }
+  100% {
+    background-position: 50% 100%;
+  }
+}
+
+.card1 > div {
+  -webkit-transform: translateY(14%);
+          transform: translateY(14%);
+  padding: 3rem 2.5rem;
+  padding-bottom: 12rem;
+}
+
+.card1 > div:hover {
+  font-weight: 600;
+  color: #0c283f;
+  -webkit-animation: scrollUp 2s ease forwards;
+          animation: scrollUp 2s ease forwards;
+}
+
+.card1Text {
+  line-height: 1150%;
+}
+
+.card1p {
+  position: absolute;
+  left: 5%;
+  top: 67%;
+  font-size: 1rem;
+  text-shadow: 1px 1px 5px rgba(238, 230, 230, 0.7), -1px -1px 5px rgba(238, 230, 230, 0.7), 1px -1px 5px rgba(238, 230, 230, 0.7), -1px 1px 5px rgba(238, 230, 230, 0.7);
+}
+
+.card1Info {
+  position: absolute;
+  top: 60%;
+  color: white;
+}
+
+@-webkit-keyframes scrollUp {
+  0% {
+    -webkit-transform: translateY(14%);
+            transform: translateY(14%);
+  }
+  100% {
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+  }
+}
+
+@keyframes scrollUp {
+  0% {
+    -webkit-transform: translateY(14%);
+            transform: translateY(14%);
+  }
+  100% {
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+  }
+}
+
+@-webkit-keyframes tilt {
+  0% {
+    -webkit-transform: rotateY(-5deg) rotateX(5deg);
+            transform: rotateY(-5deg) rotateX(5deg);
+  }
+  50% {
+    -webkit-box-shadow: 2px 2px 3px grey;
+            box-shadow: 2px 2px 3px grey;
+    -webkit-transform: rotateY(-10deg) rotateX(10deg) scale(99%);
+            transform: rotateY(-10deg) rotateX(10deg) scale(99%);
+  }
+  100% {
+    -webkit-box-shadow: 2px 2px 3px grey;
+            box-shadow: 2px 2px 3px grey;
+    -webkit-transform: rotateY(-10deg) rotateX(10deg) scale(99%);
+            transform: rotateY(-10deg) rotateX(10deg) scale(99%);
+  }
+}
+
+@keyframes tilt {
+  0% {
+    -webkit-transform: rotateY(-5deg) rotateX(5deg);
+            transform: rotateY(-5deg) rotateX(5deg);
+  }
+  50% {
+    -webkit-box-shadow: 2px 2px 3px grey;
+            box-shadow: 2px 2px 3px grey;
+    -webkit-transform: rotateY(-10deg) rotateX(10deg) scale(99%);
+            transform: rotateY(-10deg) rotateX(10deg) scale(99%);
+  }
+  100% {
+    -webkit-box-shadow: 2px 2px 3px grey;
+            box-shadow: 2px 2px 3px grey;
+    -webkit-transform: rotateY(-10deg) rotateX(10deg) scale(99%);
+            transform: rotateY(-10deg) rotateX(10deg) scale(99%);
+  }
 }
 
 .card2 {
-  background: #36c736;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#3dcf5d), color-stop(#159e33), to(#06771e));
+  background-image: linear-gradient(to bottom right, #3dcf5d, #159e33, #06771e);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: perspective(1500px);
+          transform: perspective(1500px);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.card2:hover {
+  -webkit-animation: tilt 2s ease forwards;
+          animation: tilt 2s ease forwards;
+  text-shadow: 0px 0px 0px rgba(253, 253, 253, 0.7), 2px 0px 0px rgba(5, 5, 5, 0.5);
+  font-size: 1.7rem;
+}
+
+.card2 div {
+  margin-top: 0.5rem;
+  color: transparent;
+  font-size: 1.3rem;
 }
 
 .card3 {
-  background: #a1eba1;
+  position: relative;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#d8648b), color-stop(#af3e5c), to(#791320));
+  background-image: linear-gradient(to bottom right, #d8648b, #af3e5c, #791320);
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card3:hover {
+  -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5), 1px 2px 3px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5), 1px 2px 3px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+  font-size: 1.6rem;
+}
+
+.card3 > div {
+  position: absolute;
+  padding: 2rem;
+  padding-top: 8.5rem;
+  padding-bottom: 1rem;
+  bottom: 1%;
+  left: 4%;
+  z-index: 1;
+  opacity: 0;
+}
+
+.card3 > div:hover {
+  opacity: 1;
+  z-index: 2;
+}
+
+#click {
+  margin-top: 2rem;
+  border-left: 2px solid rgba(231, 115, 144, 0.7);
+  border-top: 2px solid rgba(231, 115, 144, 0.7);
+  border-bottom: 2px solid rgba(97, 18, 38, 0.7);
+  border-right: 2px solid rgba(114, 24, 46, 0.7);
+  font-size: 1.3rem;
+  background-color: rgba(252, 107, 143, 0.7);
+  border-radius: 8px;
+  -webkit-box-shadow: 1px 1px 3px black;
+          box-shadow: 1px 1px 3px black;
+  cursor: pointer;
+  z-index: 2;
+}
+
+#click:hover {
+  opacity: 1;
+  -webkit-box-shadow: 1px 1px 3px rgba(3, 3, 3, 0.1);
+          box-shadow: 1px 1px 3px rgba(3, 3, 3, 0.1);
+  -webkit-transform: translateX(1px) translateY(1px);
+          transform: translateX(1px) translateY(1px);
 }
 
 .panel2 {
@@ -1030,6 +1292,89 @@ button {
       -ms-flex-align: start;
           align-items: flex-start;
   border: 2px solid #fc9803;
+}
+
+.card4 {
+  background-color: transparent;
+  -webkit-perspective: 800px;
+          perspective: 800px;
+  border: none;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  -webkit-box-shadow: 0px 5px 10px rgba(5, 5, 5, 0.2);
+          box-shadow: 0px 5px 10px rgba(5, 5, 5, 0.2);
+  border-radius: 10px;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.card:hover {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+  -webkit-box-shadow: 0px -5px 10px rgba(5, 5, 5, 0.2);
+          box-shadow: 0px -5px 10px rgba(5, 5, 5, 0.2);
+}
+
+.front, .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  text-align: center;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.front {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#d4d8db), color-stop(#d4dee4), to(#9fafb9));
+  background-image: linear-gradient(to right bottom, #d4d8db, #d4dee4, #9fafb9);
+  background-size: 20rem;
+  background-position: bottom;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.back {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#98c1e0), color-stop(#5a9dc7), to(#4789b4));
+  background-image: linear-gradient(to right bottom, #98c1e0, #5a9dc7, #4789b4);
+  color: white;
+  -webkit-transform: rotateY(180deg) rotateZ(180deg);
+          transform: rotateY(180deg) rotateZ(180deg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .panel3 {
@@ -1185,7 +1530,7 @@ i:hover {
     margin-right: 0;
     border: 1px solid rgba(167, 215, 204, 0.5);
     border-radius: 7px;
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   .buttonNav:hover {
     border-radius: 7px;
@@ -1200,6 +1545,27 @@ i:hover {
     -webkit-box-shadow: 2px 2px 10px #d5e5ee, -2px -2px 10px #d5e5ee, 2px -2px 10px #d5e5ee, -2px 2px 10px #d5e5ee;
             box-shadow: 2px 2px 10px #d5e5ee, -2px -2px 10px #d5e5ee, 2px -2px 10px #d5e5ee, -2px 2px 10px #d5e5ee;
     opacity: 0;
+  }
+  .card1, .card2, .card3, .card4, .card5, .card6 {
+    height: 14rem;
+    width: 10rem;
+    padding: 0.1rem 0.1rem;
+    border-radius: 10px;
+  }
+  .card1 > div {
+    padding-right: 13%;
+    padding-left: 13%;
+  }
+  .card1p {
+    width: 100%;
+    padding: 2rem 0rem;
+    font-size: 1rem;
+    top: 62%;
+  }
+  .card3 > div {
+    left: 1%;
+    padding: 1.15rem;
+    padding-top: 9rem;
   }
 }
 

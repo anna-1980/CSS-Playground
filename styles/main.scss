@@ -126,7 +126,7 @@ button{
     margin-right: 0;
     border: 1px solid rgba(167, 215, 204, 0.5);
     border-radius: 7px;
-    font-size: 1.5rem;
+    font-size: 1rem;
 
     &:hover{
         border-radius: 7px;
@@ -149,8 +149,30 @@ button{
       }
 
    }
+  
+   .card1, .card2, .card3, .card4, .card5, .card6{
+    height: 14rem;
+    width: 10rem;
+    padding: $paddingLeft $paddingRight;
+    border-radius: 10px ;
+   }
 
-
+   .card1 > div{
+    // background: rgba(76, 150, 76, 0.5);
+    padding-right: 13%;
+    padding-left: 13%;
+   }
+   .card1p{
+       width: 100%;
+       padding: 2rem 0rem;
+       font-size: 1rem;
+       top: 62%;
+   }
+   .card3 >div{
+       left: 1%;
+       padding: 1.15rem;
+       padding-top: 9rem;
+   }
 }
 
 @media screen and (min-width: 750px) {

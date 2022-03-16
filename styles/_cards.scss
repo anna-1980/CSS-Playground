@@ -4,6 +4,9 @@ $paddingLeft: 0.1rem;
 $paddingRight: 0.1rem;
 $borderRadius: 10px;
 
+
+
+
 .containerCards{
   height: content;
   width: 80%;
@@ -25,28 +28,236 @@ $borderRadius: 10px;
   border: 2px solid green;
 }
 
-.card1, .card2, .card3{
+.card1, .card2, .card3, .card4, .card5, .card6{
   height: $cardHeight;
   width: $cardWidth;
   padding: $paddingLeft $paddingRight;
   border-radius: 10px ;
   border: 2px solid rgb(128, 0, 49);
+  color: ivory;
+  font-size: 1.5rem;
+  @include flex(row, space-around, center);
+  
 }
 
 .card1{
-   
-  background: green;
+  position: relative;
+  transition: all 1s;
+  background-image: linear-gradient(to right bottom,
+  rgb(39, 82, 110), 
+  rgb(18, 62, 92), 
+  rgb(6, 34, 53),
+  rgb(39, 82, 110), 
+  rgb(18, 62, 92), 
+  rgb(6, 34, 53));
+  background-size: 400% 400%;
+  perspective: 500px;
+  transform-style: preserve-3d;
+  overflow: hidden;
   
-}
-.card2{
-  
-  background: rgb(54, 199, 54);
-  
-}
-.card3{
+  &:hover{
+
+    animation: shades 5s ease forwards ;
+    // background-image: linear-gradient(to bottom right, 
+    // rgb(6, 34, 53),
+    // rgb(18, 62, 92), 
+    // rgb(51, 101, 134)); 
  
-  background: rgb(161, 235, 161);
+  }
   
+
+  @keyframes shades {
+    0%{
+      background-position:0% 50%;
+      // box-shadow: 2px 2px 3px grey;
+      
+      
+    }
+    50%{
+      background-position:100% 50%;
+    
+    }
+    100%{
+      background-position:100% 50%;
+    
+    }
+    }
+  
+    @keyframes shades2 {
+      0%{background-position:96% 0%}
+      100%{background-position:50% 100%}
+      }
+  
+  }
+
+  .card1 > div{
+    // background-color: grey;
+    transform: translateY(14%);
+    padding: 3rem 2.5rem;
+    padding-bottom: 12rem;
+   
+  }
+ .card1 > div:hover {
+  
+    font-weight: 600;
+    color: rgb(12, 40, 63);
+
+    animation: scrollUp 2s ease forwards;
+    
+ }
+
+ .card1Text{
+
+   line-height: 1150%;
+  
+ }
+
+ .card1p{
+  position: absolute;
+  left: 5%;
+  top: 67%;
+  font-size: 1rem;
+  text-shadow: 
+  1px 1px 5px rgba(238, 230, 230, 0.7),
+  -1px -1px 5px rgba(238, 230, 230, 0.7),
+  1px -1px 5px rgba(238, 230, 230, 0.7),
+  -1px 1px 5px rgba(238, 230, 230, 0.7);
+}
+
+.card1Info{
+  position: absolute;
+  top: 60%;
+  color: white;
+  
+ }
+
+ @keyframes scrollUp {
+
+  0%{
+    transform: translateY(14%);
+  }
+  100%{
+    transform: translateY(-20%);
+    
+  }
+   
+ }
+
+  @keyframes tilt {
+    0%{
+      
+      // box-shadow: 2px 2px 3px grey;
+      transform: 
+      rotateY(-5deg)
+      rotateX(5deg);
+      
+    }
+    50%{
+      
+      box-shadow: 2px 2px 3px grey;
+      transform: 
+      rotateY(-10deg)
+      rotateX(10deg)
+      scale(99%);
+    }
+    100%{
+     
+      box-shadow: 2px 2px 3px grey;
+      transform: 
+      rotateY(-10deg)
+      rotateX(10deg)
+      scale(99%);
+    }
+
+    
+  }
+
+  
+
+.card2{
+  @include flex(column, center, center);
+  background-image: linear-gradient(to bottom right, 
+  rgb(61, 207, 93), 
+  rgb(21, 158, 51), 
+  rgb(6, 119, 30)); 
+  transition: all 1s;
+  transform-origin: center;
+  transform: perspective(1500px);
+  transform-style: preserve-3d;
+ &:hover{
+  animation: tilt 2s ease forwards;
+  text-shadow: 0px 0px 0px rgba(253, 253, 253, 0.7), 2px 0px 0px rgba(5, 5, 5, 0.5);
+  font-size: 1.7rem;
+ }
+}
+
+.card2 div {
+  margin-top: 0.5rem;
+  color:transparent;
+  font-size: 1.3rem;
+}
+ 
+
+
+
+.card3{
+ position: relative;
+  background-image: linear-gradient(to bottom right, 
+  rgb(216, 100, 139), 
+  rgb(175, 62, 92), 
+  rgb(121, 19, 32)); 
+  transition: all 0.6s;
+  @include flex(column, center, center);
+  
+}
+
+.card3:hover{
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5), 1px 2px 3px rgba(0, 0, 0, 0.5) ;
+  transform:scale(1.01);
+  font-size: 1.6rem;
+}
+
+.card3 >div {
+  // background-color: red;
+  position: absolute;
+  padding: 2rem;
+  padding-top: 8.5rem;
+  padding-bottom: 1rem;
+  bottom: 1%;
+  left: 4%;
+
+  z-index: 1;
+  opacity: 0;
+  
+}
+
+.card3 >div:hover{
+  // background-color: cyan;
+  opacity: 1;
+  z-index: 2;
+}
+
+#click{
+  margin-top: 2rem;
+  border-left: 2px solid rgba(231, 115, 144, 0.7);
+  border-top: 2px solid rgba(231, 115, 144, 0.7);
+  border-bottom: 2px solid rgba(97, 18, 38, 0.7);
+  border-right: 2px solid rgba(114, 24, 46, 0.7);
+  font-size: 1.3rem;
+  background-color: rgba(252, 107, 143, 0.7);
+  border-radius: 8px;
+  box-shadow: 1px 1px 3px black;
+  cursor: pointer;
+  z-index: 2;
+   
+}
+
+#click:hover{
+  opacity: 1;
+  box-shadow: 1px 1px 3px rgba(3, 3, 3, 0.1);
+  transform: 
+  translateX(1px)
+  translateY(1px);
 }
 
 .panel2{
@@ -56,6 +267,64 @@ $borderRadius: 10px;
   @include flex(row, space-around, flex-start);
   border: 2px solid rgb(252, 152, 3);
 }
+
+.card4 {
+  background-color: transparent;
+  perspective: 800px;
+  border: none;
+  
+}
+
+.card{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  box-shadow: 0px 5px 10px rgba(5, 5, 5, 0.2);
+  border-radius: 10px;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  // transform-origin: 20% 20%;
+
+}
+
+.card:hover{
+  transform: rotateX(180deg) ;
+  box-shadow: 0px -5px 10px rgba(5, 5, 5, 0.2);
+}
+.front, .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  text-align: center;
+  backface-visibility: hidden;
+}
+.front {
+  background-image: linear-gradient(to right bottom,
+  rgb(212, 216, 219), 
+  rgb(212, 222, 228), 
+  rgb(159, 175, 185));
+  // background-image: url("../assets/icons/Plant_cell2-seamless.png");
+  background-size: 20rem;
+  background-position: bottom;
+  color: black;
+  @include flex(column, center, center);
+}
+
+.back {
+  background-image: linear-gradient(to right bottom,
+  rgb(152, 193, 224), 
+  rgb(90, 157, 199), 
+  rgb(71, 137, 180));
+  color: white;
+  transform: rotateY(180deg) rotateZ(180deg);
+  @include flex(column, space-around, center);
+}
+
+
 .panel3{
   height: 100%;
   width: 100%;
@@ -63,6 +332,9 @@ $borderRadius: 10px;
   @include flex(row, space-around, flex-start);
   border: 2px solid rgb(22, 182, 245);
 }
+
+
+
 
 @media screen and (max-width: 360px) {
   .card1, .card2, .card3{
@@ -73,3 +345,5 @@ $borderRadius: 10px;
   }
 
 }
+
+// https://www.gradient-animator.com/
