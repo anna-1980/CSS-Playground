@@ -1,6 +1,7 @@
 @import "variables.scss";
 @import "buttons.scss";
 @import "navi.scss";
+@import "cards.scss";
 
 
 *{
@@ -88,6 +89,11 @@ font-size: 2rem;
 
 @media screen and (max-width: 360px) {
     
+a {
+    
+    padding: 0.6rem;
+}
+
 button{
     margin: 0.5rem;
     padding: 1rem;
@@ -117,10 +123,57 @@ button{
 
     .buttonNav {
     margin-left: 0;
+    margin-right: 0;
     border: 1px solid rgba(167, 215, 204, 0.5);
     border-radius: 7px;
-    font-size: 1.5rem;
+    font-size: 1rem;
 
+    &:hover{
+        border-radius: 7px;
+    }
+
+    &::after{
+       
+        border-radius: 7px;
+      
+      }
+      &:hover::after{
+        transform: scaleX(1.25) scaleY(1.4);
+        border-radius: 7px;
+        box-shadow: 
+        2px 2px 10px $bright-color2, 
+        -2px -2px 10px $bright-color2,
+        2px -2px 10px $bright-color2,
+        -2px 2px 10px $bright-color2;
+        opacity: 0;
+      }
+
+   }
+  
+//    .card1, .card2, .card3, .card4, .card5, .card6{
+//     height: 14rem;
+//     width: 10rem;
+//     // padding: $paddingLeft $paddingRight;
+//     border-radius: 10px ;
+//     padding: 0.1rem 0.1rem;
+//    }
+
+   .card1 > div{
+    // background: rgba(76, 150, 76, 0.5);
+    padding-right: 13%;
+    padding-left: 13%;
+   }
+   .card1p{
+       width: 100%;
+       padding: 2rem 0rem;
+       font-size: 1rem;
+       top: 62%;
+   }
+
+   i {
+       font-size: 1.7rem;
+       margin-left: 0.5rem;
+       margin-right: 0.5rem;
    }
 
 }
@@ -132,6 +185,10 @@ button{
 }
 
 .container {
+    height: content;
+    width: 700px;
+}
+.containerCards {
     height: content;
     width: 700px;
 }

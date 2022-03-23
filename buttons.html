@@ -37,397 +37,10 @@
   <div class="instructions">
       <p>Hover over to see the effect</p>
       <p>Click to see my code</p>
-  </div>
-          <nav class="nav4 code4">
-              <button class="home4"  >Home4</button>
-              <button class="about4" >About4</button>
-              <button class="contact4 ">Contact4</button>
-          </nav>
-   
+  </div> 
   <div>
     </div>
-    
-  
-          <nav class="nav4c menu4" >
-              <div class="close4">
-                   x
-              </div>
-      <pre>
-   <code>
-  .home4 {
-      position: relative;
-      z-index: 2;
-      border-radius: 5px;
-      background-color: rgb(255, 255, 255);
-      color: rgb(48, 48, 48);
-      box-shadow: 2px 2px 5px rgb(37, 36, 36);
-      transform: perspective(200px);
-      transition: transform 1s;
-      }
-      
-  .home4::after{
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 101%;
-      height: 100%;
-      border-top-left-radius: 5px;
-      border-bottom-left-radius:5px ;
-      background-color: rgb(145, 156, 168);
-      z-index: -1;
-      transform-origin: left;
-      transform: scalex(0.5);
-      transition: transform 1s;
-  }
-      
-  .home4:hover::after {
-      transform-origin: left;
-      transform: scalex(0);
-      transition: transform 1s;
-  }
-      
-  .home4::before{
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius:5px ;
-  background-color: rgb(145, 156, 168);
-  z-index: -1;
-  transform-origin: right;
-  transform: scalex(0.5);
-  transition: transform 1s;
-  }
-      
-  .home4:hover::before {
-  transform-origin: right;
-  transform: scalex(0);
-  transition: transform 1s;
-  }
-  
-  </code>
-      </pre>
-              <pre>
-      <code>
-  .about4 {
-      position: relative;
-      z-index: 1;
-      border-radius: 5px;
-      background-color:transparent;
-      perspective: 400px;
-      }
-      
-  .about4::before{
-      content: "About4";
-      position: absolute;
-      border-radius: 5px;
-      background-color: rgb(190, 199, 209);
-      transform: scalex(1);
-      padding-top: 5px;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 90%;
-      z-index: -1;
-  }
-  .about4:hover::before {
-      color: rgb(126, 152, 175);
-      transform-origin: bottom;
-      transform: rotatex(60deg);
-      transition: transform 0.5s;
-      }
-      </code>
-              </pre>
-          <pre>
-      <code>
-  .contact4{
-      border-radius: 5px;
-      box-shadow: 2px 2px 5px rgba(37, 36, 36, 0.3);
-      }
-      
-  .contact4:hover{
-      scale: 1.05;
-      border-radius: 5px;
-      box-shadow: 3px 3px 5px rgba(37, 36, 36, 0.8), -1px -1px 5px rgba(37, 36, 36, 0.8);
-      }
-      </code>
-          </pre>
-               
-          </nav>
-  
-          <nav class="nav3 code3">
-              <button class="home3">Home3</button>
-              <button class="about3">About3</button>
-              <button class="contact3">Contact3</button>
-              <!-- <button class="back3">back3</button> -->
-          </nav>
-  
-  <nav class="nav3c menu3">
-  <div class="close3">
-                   x
-              </div>
-  <pre>
-  <code>
-  .nav3 {
-      margin: 0.5rem;
-      background-image: -moz-repeating-linear-gradient(
-          120deg,
-          rgb(114, 12, 114),
-          rgb(43, 131, 207),
-          rgb(114, 12, 114)
-      );
-      width: 95%;
-      height: 10vw;
-      @include flex(row, center, center);
-      button {
-          font-weight: 600;
-          color: antiquewhite;
-      }
-      }
-  .home3 {
-      position: relative;
-      cursor: pointer;
-      }
-      
-  .home3::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 1px;
-      width: 100%;
-      height: 3px;
-      background: rgb(209, 123, 11);
-      transform-origin: right;
-      transform: scaleX(0%) rotateY(30deg);
-      transition: transform 300ms ease-in;
-      }
-      
-  .home3::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 1px;
-      width: 100%;
-      height: 3px;
-      background: antiquewhite;
-      transform-origin: left;
-      transform: scaleX(0%);
-      transition: transform 300ms ease-in;
-      }
-      
-  .home3:hover::after {
-      transform: scaleX(100%);
-      }
-    
-  </code>
-  </pre>
-  <pre>
-  <code>
-  .about3 {
-      border: 3px solid transparent;
-      border-radius: 10px;
-      }
-      
-  .about3:hover {
-      animation: border 0.9s ease-in;
-      }
-      
-  @keyframes border {
-      0% {
-          border-right: 3px solid rgb(83, 158, 224);
-      }
-      25% {
-          border-top: 3px solid rgb(83, 158, 224);
-      }
-      50% {
-          border-left: 3px solid rgb(83, 158, 224);
-      }
-      95% {
-          border-bottom: 3px solid rgb(83, 158, 224);
-      }
-      
-      100% {
-          border-bottom: 3px solid transparent;
-      }
-      }
-  </code>
-  </pre>
-  <pre>
-  <code>
-  .contact3 {
-      border: 3px solid transparent;
-      border-radius: 8px;
-      }
-      
-  .contact3:hover {
-      animation: border2 1.5s ease-in-out forwards;
-      }
-      
-  @keyframes border2 {
-      from {
-          border-bottom: 3px solid rgb(250, 173, 122);
-      }
-      25% {
-          border-bottom: 3px solid rgb(122, 190, 250);
-          border-right: 3px solid rgb(250, 173, 122);
-      }
-      50% {
-          border-bottom: 3px solid rgb(122, 190, 250);
-          border-right: 3px solid rgb(122, 190, 250);
-          border-top: 3px solid rgb(250, 173, 122);
-      }
-      to {
-          border-bottom: 3px solid rgb(250, 173, 122);
-          border-right: 3px solid rgb(250, 173, 122);
-          border-top: 3px solid rgb(250, 173, 122);
-          border-left: 3px solid rgb(250, 173, 122);
-      }
-      }
-  </code>
-  </pre>
-  </nav>
-   
-          
-          <nav class="nav2 code2">
-              <button class="home2">Home2</button>
-              <button class="about2">About2</button>
-              <button class="contact2">Contact2</button>
-          </nav>
-  <nav class="nav2c menu2">
-      <div class="close2">
-          x
-     </div>
-  <pre>
-  <code>
-  .home2,
-  .about2,
-  .contact2 {
-      position: relative;
-      border-bottom: 3px solid rgb(204, 91, 153);
-      border-right: 3px solid rgb(204, 91, 153);
-      border-radius: 10px;
-      background-color: rgb(182, 62, 128);
-      color: pink;
-      
-      &:hover {
-      border-left: 3px solid rgb(94, 27, 64);
-      border-top: 3px solid rgb(94, 27, 64);
-      border-bottom: none;
-      border-right: none;
-      color: rgb(250, 208, 215);
-        }
-      }
-  .home2::after {
-      content: "";
-      position: absolute;
-      top: 2px;
-      left: 2px;
-      width: 95%;
-      height: 50%;
-      border-top-left-radius: 4px;
-      border-bottom-left-radius: 2px;
-      background: linear-gradient(
-          170deg,
-          rgba(255, 255, 255, 0.6),
-          rgba(255, 255, 255, 0)
-      );
-      } 
-  </code>
-  </pre>
-  <pre>
-  <code>
-  .home2,
-  .about2,
-  .contact2 {
-      position: relative;
-      border-bottom: 3px solid rgb(204, 91, 153);
-      border-right: 3px solid rgb(204, 91, 153);
-      border-radius: 10px;
-      background-color: rgb(182, 62, 128);
-      color: pink;
-  
-      &:hover {
-      border-left: 3px solid rgb(94, 27, 64);
-      border-top: 3px solid rgb(94, 27, 64);
-      border-bottom: none;
-      border-right: none;
-      color: rgb(250, 208, 215);
-      }
-  }
-  .about2::after {
-      content: "";
-      position: absolute;
-      top: 2px;
-      left: 2px;
-      width: 95%;
-      height: 50%;
-      border-top-left-radius: 4px;
-      border-bottom-left-radius: 2px;
-      background: linear-gradient(
-          170deg,
-          rgba(255, 255, 255, 0.5),
-          rgba(255, 255, 255, 0)
-      );
-      }
-        
-  .about2:hover:after {
-      content: "";
-      position: absolute;
-      bottom: 0px;
-      right: 0px;
-      transform-origin: 22px 8px;
-      background: linear-gradient(
-          170deg,
-          rgba(136, 43, 94, 0.5),
-          rgba(255, 255, 255, 0)
-      );
-      }
-  </code>
-  </pre>
-  <pre>
-  <code>
-  .contact2 {
-      position: relative;
-      border-bottom: 3px solid rgb(204, 91, 153);
-      border-right: 3px solid rgb(204, 91, 153);
-      border-radius: 10px;
-      background-color: rgb(182, 62, 128);
-      color: pink;
-      
-      &:hover {
-          border-left: 3px solid rgb(94, 27, 64);
-          border-top: 3px solid rgb(94, 27, 64);
-          border-bottom: none;
-          border-right: none;
-          color: rgb(250, 208, 215);
-      }
-      }
-  .contact2::after {
-      content: "";
-      position: absolute;
-      top: 2px;
-      left: 2px;
-      width: 95%;
-      height: 50%;
-      border-top-left-radius: 4px;
-      border-bottom-left-radius: 2px;
-      background: linear-gradient(
-          170deg,
-          rgba(255, 255, 255, 0.5),
-          rgba(255, 255, 255, 0)
-      );
-      }
-        
-  .contact2:hover::after {
-      background: transparent;
-      }
-  </code>
-  </pre>
-  </nav>
+
           <nav class="nav1 code1">
               <button class="home1">Home1</button>
               <button class="about1">About1</button>
@@ -500,6 +113,376 @@
   </code>
   </pre>
   </nav>   
+  <nav class="nav2 code2">
+    <button class="home2">Home2</button>
+    <button class="about2">About2</button>
+    <button class="contact2">Contact2</button>
+</nav>
+<nav class="nav2c menu2">
+<div class="close2">
+x
+</div>
+<pre>
+<code>
+.home2,
+.about2,
+.contact2 {
+position: relative;
+border-bottom: 3px solid rgb(204, 91, 153);
+border-right: 3px solid rgb(204, 91, 153);
+border-radius: 10px;
+background-color: rgb(182, 62, 128);
+color: pink;
+
+&:hover {
+border-left: 3px solid rgb(94, 27, 64);
+border-top: 3px solid rgb(94, 27, 64);
+border-bottom: none;
+border-right: none;
+color: rgb(250, 208, 215);
+}
+}
+.home2::after {
+content: "";
+position: absolute;
+top: 2px;
+left: 2px;
+width: 95%;
+height: 50%;
+border-top-left-radius: 4px;
+border-bottom-left-radius: 2px;
+background: linear-gradient(
+170deg,
+rgba(255, 255, 255, 0.6),
+rgba(255, 255, 255, 0)
+);
+} 
+</code>
+</pre>
+<pre>
+<code>
+.home2,
+.about2,
+.contact2 {
+position: relative;
+border-bottom: 3px solid rgb(204, 91, 153);
+border-right: 3px solid rgb(204, 91, 153);
+border-radius: 10px;
+background-color: rgb(182, 62, 128);
+color: pink;
+
+&:hover {
+border-left: 3px solid rgb(94, 27, 64);
+border-top: 3px solid rgb(94, 27, 64);
+border-bottom: none;
+border-right: none;
+color: rgb(250, 208, 215);
+}
+}
+.about2::after {
+content: "";
+position: absolute;
+top: 2px;
+left: 2px;
+width: 95%;
+height: 50%;
+border-top-left-radius: 4px;
+border-bottom-left-radius: 2px;
+background: linear-gradient(
+170deg,
+rgba(255, 255, 255, 0.5),
+rgba(255, 255, 255, 0)
+);
+}
+
+.about2:hover:after {
+content: "";
+position: absolute;
+bottom: 0px;
+right: 0px;
+transform-origin: 22px 8px;
+background: linear-gradient(
+170deg,
+rgba(136, 43, 94, 0.5),
+rgba(255, 255, 255, 0)
+);
+}
+</code>
+</pre>
+<pre>
+<code>
+.contact2 {
+position: relative;
+border-bottom: 3px solid rgb(204, 91, 153);
+border-right: 3px solid rgb(204, 91, 153);
+border-radius: 10px;
+background-color: rgb(182, 62, 128);
+color: pink;
+
+&:hover {
+border-left: 3px solid rgb(94, 27, 64);
+border-top: 3px solid rgb(94, 27, 64);
+border-bottom: none;
+border-right: none;
+color: rgb(250, 208, 215);
+}
+}
+.contact2::after {
+content: "";
+position: absolute;
+top: 2px;
+left: 2px;
+width: 95%;
+height: 50%;
+border-top-left-radius: 4px;
+border-bottom-left-radius: 2px;
+background: linear-gradient(
+170deg,
+rgba(255, 255, 255, 0.5),
+rgba(255, 255, 255, 0)
+);
+}
+
+.contact2:hover::after {
+background: transparent;
+}
+</code>
+</pre>
+</nav>
+<nav class="nav3 code3">
+    <button class="home3">Home3</button>
+    <button class="about3">About3</button>
+    <button class="contact3">Contact3</button>
+    <!-- <button class="back3">back3</button> -->
+</nav>
+
+<nav class="nav3c menu3">
+<div class="close3">
+         x
+    </div>
+<pre>
+<code>
+.nav3 {
+margin: 0.5rem;
+background-image: -moz-repeating-linear-gradient(
+120deg,
+rgb(114, 12, 114),
+rgb(43, 131, 207),
+rgb(114, 12, 114)
+);
+width: 95%;
+height: 10vw;
+@include flex(row, center, center);
+button {
+font-weight: 600;
+color: antiquewhite;
+}
+}
+.home3 {
+position: relative;
+cursor: pointer;
+}
+
+.home3::after {
+content: "";
+position: absolute;
+bottom: 0;
+left: 1px;
+width: 100%;
+height: 3px;
+background: antiquewhite;
+transform-origin: left;
+transform: scaleX(0%);
+transition: transform 300ms ease-in;
+}
+
+.home3:hover::after {
+transform: scaleX(100%);
+}
+
+</code>
+</pre>
+<pre>
+<code>
+.about3 {
+border: 3px solid transparent;
+border-radius: 10px;
+}
+
+.about3:hover {
+animation: border 0.9s ease-in;
+}
+
+@keyframes border {
+0% {
+border-right: 3px solid rgb(83, 158, 224);
+}
+25% {
+border-top: 3px solid rgb(83, 158, 224);
+}
+50% {
+border-left: 3px solid rgb(83, 158, 224);
+}
+95% {
+border-bottom: 3px solid rgb(83, 158, 224);
+}
+
+100% {
+border-bottom: 3px solid transparent;
+}
+}
+</code>
+</pre>
+<pre>
+<code>
+.contact3 {
+border: 3px solid transparent;
+border-radius: 8px;
+}
+
+.contact3:hover {
+animation: border2 1.5s ease-in-out forwards;
+}
+
+@keyframes border2 {
+from {
+border-bottom: 3px solid rgb(250, 173, 122);
+}
+25% {
+border-bottom: 3px solid rgb(122, 190, 250);
+border-right: 3px solid rgb(250, 173, 122);
+}
+50% {
+border-bottom: 3px solid rgb(122, 190, 250);
+border-right: 3px solid rgb(122, 190, 250);
+border-top: 3px solid rgb(250, 173, 122);
+}
+to {
+border-bottom: 3px solid rgb(250, 173, 122);
+border-right: 3px solid rgb(250, 173, 122);
+border-top: 3px solid rgb(250, 173, 122);
+border-left: 3px solid rgb(250, 173, 122);
+}
+}
+</code>
+</pre>
+</nav>
+
+<nav class="nav4 code4">
+    <button class="home4"  >Home4</button>
+    <button class="about4" >About4</button>
+    <button class="contact4 ">Contact4</button>
+</nav>
+<nav class="nav4c menu4" >
+    <div class="close4">
+         x
+    </div>
+<pre>
+<code>
+.home4 {
+position: relative;
+z-index: 2;
+border-radius: 5px;
+background-color: rgb(255, 255, 255);
+color: rgb(48, 48, 48);
+box-shadow: 2px 2px 5px rgb(37, 36, 36);
+transform: perspective(200px);
+transition: transform 1s;
+}
+
+.home4::after{
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 101%;
+height: 100%;
+border-top-left-radius: 5px;
+border-bottom-left-radius:5px ;
+background-color: rgb(145, 156, 168);
+z-index: -1;
+transform-origin: left;
+transform: scalex(0.5);
+transition: transform 1s;
+}
+
+.home4:hover::after {
+transform-origin: left;
+transform: scalex(0);
+transition: transform 1s;
+}
+
+.home4::before{
+content: "";
+position: absolute;
+top: 0;
+right: 0;
+width: 100%;
+height: 100%;
+border-top-right-radius: 5px;
+border-bottom-right-radius:5px ;
+background-color: rgb(145, 156, 168);
+z-index: -1;
+transform-origin: right;
+transform: scalex(0.5);
+transition: transform 1s;
+}
+
+.home4:hover::before {
+transform-origin: right;
+transform: scalex(0);
+transition: transform 1s;
+}
+
+</code>
+</pre>
+    <pre>
+<code>
+.about4 {
+position: relative;
+z-index: 1;
+border-radius: 5px;
+background-color:transparent;
+perspective: 400px;
+}
+
+.about4::before{
+content: "About4";
+position: absolute;
+border-radius: 5px;
+background-color: rgb(190, 199, 209);
+transform: scalex(1);
+padding-top: 5px;
+top: 0;
+right: 0;
+width: 100%;
+height: 90%;
+z-index: -1;
+}
+.about4:hover::before {
+color: rgb(126, 152, 175);
+transform-origin: bottom;
+transform: rotatex(60deg);
+transition: transform 0.5s;
+}
+</code>
+    </pre>
+<pre>
+<code>
+.contact4{
+border-radius: 5px;
+box-shadow: 2px 2px 5px rgba(37, 36, 36, 0.3);
+}
+
+.contact4:hover{
+scale: 1.05;
+border-radius: 5px;
+box-shadow: 3px 3px 5px rgba(37, 36, 36, 0.8), -1px -1px 5px rgba(37, 36, 36, 0.8);
+}
+</code>
+</pre>
+     
+</nav>
  
 <script src="./app.js"></script>
 </body>
