@@ -1650,7 +1650,6 @@ button {
 
 .card6 {
   position: relative;
-  border: 2px solid blue;
   z-index: 0;
   overflow: hidden;
 }

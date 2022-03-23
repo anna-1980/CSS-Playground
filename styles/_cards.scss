@@ -558,7 +558,7 @@ width: 95%;
 
 .card6{
   position: relative;
-  border: 2px solid blue;
+  // border: 2px solid blue;
   z-index: 0;
   overflow: hidden;
 }
@@ -572,6 +572,7 @@ width: 95%;
   width: 100%;
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.5);
+  // transform: scale(1.5);
   transition: all 2s ease;
   clip-path: polygon(0% 0%, 0% 100%, 40% 100%, 51% 47%, 51% 47%, 51% 46%, 39% 100%, 99% 100%, 100% 0%);
   z-index: 4;
