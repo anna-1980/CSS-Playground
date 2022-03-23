@@ -573,6 +573,7 @@ width: 95%;
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.5);
   // transform: scale(1.5);
+  transform: rotateX(180deg);
   transition: all 2s ease;
   clip-path: polygon(0% 0%, 0% 100%, 40% 100%, 51% 47%, 51% 47%, 51% 46%, 39% 100%, 99% 100%, 100% 0%);
   z-index: 4;
@@ -635,7 +636,7 @@ width: 95%;
 
 .card6:hover{
   .card6__overlay{
-    animation: clipping 0.6s ease-in-out forwards;
+    animation: clipping2 0.6s ease-in-out forwards;
   }
   .card6__text1{
     opacity: 0;
@@ -733,3 +734,47 @@ width: 95%;
 }
 
 // https://www.gradient-animator.com/
+
+@keyframes clipping2 {
+  
+  0%{
+    clip-path: polygon(0% 0%, 0% 100%, 48% 100%, 49% 51%, 49% 51%, 48% 100%, 100% 100%, 100% 0%);
+    opacity: 1;
+  }
+  10%{
+    clip-path: polygon(0% 0%, 0% 100%, 29% 100%, 49% 51%, 49% 51%, 73% 100%, 100% 100%, 100% 0%);
+  }
+  20%{
+    clip-path: polygon(0% 0%, 0% 100%, 0 100%, 49% 51%, 49% 51%, 100% 100%, 100% 100%, 100% 0%);
+    opacity: 1;
+  }
+  40%{
+    clip-path: polygon(0% 0%, 0 85%, 49% 51%, 49% 51%, 100% 83%, 100% 0%);
+    opacity: 0.9;
+  }
+  50%{
+    clip-path: polygon(0% 0%, 0 63%, 49% 51%, 49% 51%, 100% 66%, 100% 0%);
+    opacity: 0.8;
+  }
+  60%{
+    clip-path: polygon(0% 0%, 0 51%, 49% 51%, 49% 51%, 100% 50%, 100% 0%);
+    opacity: 0.8;
+  }
+  70%{
+    clip-path: polygon(0% 0%, 0 24%, 49% 51%, 49% 51%, 100% 24%, 100% 0%);
+    opacity: 0.8;
+  }
+  80%{
+    clip-path: polygon(0% 0%, 0 0, 49% 51%, 49% 51%, 99% 0, 100% 0%);
+    opacity: 0.7;
+  }
+  90%{
+    clip-path: polygon(18% 0, 49% 51%, 49% 51%, 80% 0);
+    opacity: 0.6;
+  }
+  100%{
+    clip-path: polygon(39% 0, 49% 51%, 49% 51%, 57% 0); 
+    opacity: 0.5;
+  }
+  
+  }
