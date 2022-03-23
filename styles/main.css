@@ -1074,35 +1074,64 @@ button {
   }
 }
 
-.card1 > div {
+.card1__info-move {
   -webkit-transform: translateY(14%);
           transform: translateY(14%);
   padding: 3rem 2.5rem;
   padding-bottom: 12rem;
 }
 
-.card1 > div:hover {
+.card1__photo {
+  position: absolute;
+  height: 50%;
+  width: 90%;
+  bottom: 3%;
+  left: 5%;
+  border: 1px solid rgba(14, 4, 4, 0.5);
+  border-radius: 10%;
+  padding: 0;
+  margin: 0;
+  background-color: green;
+  background-image: url("../assets/photos/leaves-light01.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.card1Text {
+  -webkit-transform: all 2s;
+          transform: all 2s;
+}
+
+.card1:hover .card1__info-move {
   font-weight: 600;
-  color: #0c283f;
+  color: #87abc9;
   -webkit-animation: scrollUp 2s ease forwards;
           animation: scrollUp 2s ease forwards;
 }
 
-.card1Text {
-  line-height: 1150%;
+.card1:hover .card1__photo {
+  opacity: 0;
+}
+
+.card1:hover .card1Text {
+  opacity: 0;
 }
 
 .card1p {
   position: absolute;
   left: 5%;
-  top: 67%;
+  top: 90%;
   font-size: 1rem;
+  margin-top: 1rem;
+  color: black;
   text-shadow: 1px 1px 5px rgba(238, 230, 230, 0.7), -1px -1px 5px rgba(238, 230, 230, 0.7), 1px -1px 5px rgba(238, 230, 230, 0.7), -1px 1px 5px rgba(238, 230, 230, 0.7);
 }
 
 .card1Info {
   position: absolute;
-  top: 60%;
+  top: 82%;
   color: white;
 }
 
@@ -1112,8 +1141,8 @@ button {
             transform: translateY(14%);
   }
   100% {
-    -webkit-transform: translateY(-20%);
-            transform: translateY(-20%);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
   }
 }
 
@@ -1123,8 +1152,8 @@ button {
             transform: translateY(14%);
   }
   100% {
-    -webkit-transform: translateY(-20%);
-            transform: translateY(-20%);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
   }
 }
 
@@ -1180,8 +1209,8 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#3dcf5d), color-stop(#159e33), to(#06771e));
-  background-image: linear-gradient(to bottom right, #3dcf5d, #159e33, #06771e);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#7fb4a9), color-stop(#528b80), to(#244d44));
+  background-image: linear-gradient(to bottom right, #7fb4a9, #528b80, #244d44);
   -webkit-transition: all 1s;
   transition: all 1s;
   -webkit-transform-origin: center;
@@ -1207,8 +1236,8 @@ button {
 
 .card3 {
   position: relative;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#d8648b), color-stop(#af3e5c), to(#791320));
-  background-image: linear-gradient(to bottom right, #d8648b, #af3e5c, #791320);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#c564d8), color-stop(#9c3eaf), to(#430b52));
+  background-image: linear-gradient(to bottom right, #c564d8, #9c3eaf, #430b52);
   -webkit-transition: all 0.6s;
   transition: all 0.6s;
   display: -webkit-box;
@@ -1226,43 +1255,83 @@ button {
           align-items: center;
 }
 
-.card3:hover {
-  -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5), 1px 2px 3px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5), 1px 2px 3px rgba(0, 0, 0, 0.5);
-  -webkit-transform: scale(1.01);
-          transform: scale(1.01);
-  font-size: 1.6rem;
-}
-
-.card3 > div {
+.card3__title {
   position: absolute;
   padding: 2rem;
-  padding-top: 8.5rem;
+  padding-top: 1rem;
   padding-bottom: 1rem;
-  bottom: 1%;
-  left: 4%;
+  -webkit-transform-origin: middle;
+          transform-origin: middle;
+  top: 20%;
+  left: 15%;
   z-index: 1;
+  opacity: 1;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.card3__picture-description {
+  font-size: 1rem;
+  text-align: center;
   opacity: 0;
 }
 
-.card3 > div:hover {
-  opacity: 1;
-  z-index: 2;
+.card3__picture {
+  position: absolute;
+  top: 2rem;
+  left: 0.3rem;
+  height: 55%;
+  width: 95%;
 }
 
 #click {
-  margin-top: 2rem;
-  border-left: 2px solid rgba(231, 115, 144, 0.7);
-  border-top: 2px solid rgba(231, 115, 144, 0.7);
-  border-bottom: 2px solid rgba(97, 18, 38, 0.7);
-  border-right: 2px solid rgba(114, 24, 46, 0.7);
+  margin-top: 10rem;
+  border-left: 2px solid rgba(240, 126, 240, 0.7);
+  border-top: 2px solid rgba(240, 126, 240, 0.7);
+  border-bottom: 2px solid rgba(97, 18, 73, 0.7);
+  border-right: 2px solid rgba(114, 24, 92, 0.7);
   font-size: 1.3rem;
-  background-color: rgba(252, 107, 143, 0.7);
+  background-color: rgba(252, 107, 233, 0.7);
   border-radius: 8px;
   -webkit-box-shadow: 1px 1px 3px black;
           box-shadow: 1px 1px 3px black;
   cursor: pointer;
+  opacity: 0.2;
   z-index: 2;
+}
+
+.card3:hover {
+  -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5), 1px 2px 3px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5), 1px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+.card3:hover .card3__picture {
+  opacity: 1;
+}
+
+.card3:hover .card3__picture-picture {
+  height: 80%;
+  width: 80%;
+  margin: 0 auto;
+  background-image: url("../assets/photos/baby-goat.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 190%;
+  border-radius: 10px;
+}
+
+.card3:hover .card3__picture-description {
+  height: 20%;
+  color: #94fdda;
+  opacity: 1;
+}
+
+.card3:hover #click {
+  opacity: 1;
+}
+
+.card3:hover .card3__title {
+  opacity: 0;
 }
 
 #click:hover {
@@ -1289,6 +1358,7 @@ button {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  z-index: 1;
 }
 
 .card4 {
@@ -1296,6 +1366,7 @@ button {
   -webkit-perspective: 800px;
           perspective: 800px;
   border: none;
+  z-index: 1;
 }
 
 .card {
@@ -1334,8 +1405,8 @@ button {
 }
 
 .front {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#d4d8db), color-stop(#d4dee4), to(#9fafb9));
-  background-image: linear-gradient(to right bottom, #d4d8db, #d4dee4, #9fafb9);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#d1dfdc), color-stop(#9ab4af), to(#5f7e77));
+  background-image: linear-gradient(to right bottom, #d1dfdc, #9ab4af, #5f7e77);
   background-size: 20rem;
   background-position: bottom;
   color: black;
@@ -1355,8 +1426,8 @@ button {
 }
 
 .back {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#98c1e0), color-stop(#5a9dc7), to(#4789b4));
-  background-image: linear-gradient(to right bottom, #98c1e0, #5a9dc7, #4789b4);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#7fb4a9), color-stop(#528b80), to(#183d35));
+  background-image: linear-gradient(to right bottom, #7fb4a9, #528b80, #183d35);
   color: white;
   -webkit-transform: rotateY(180deg) rotateZ(180deg);
           transform: rotateY(180deg) rotateZ(180deg);
@@ -1372,6 +1443,191 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.card5 {
+  height: 16rem;
+  width: 12rem;
+  position: relative;
+  color: #87e6fd;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  z-index: 2;
+}
+
+.card5 .card5__text {
+  z-index: 5;
+  padding-top: 2rem;
+}
+
+.card5 .card5-top, .card5 .card5-side, .card5 .card5-bottom {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.card5 .card5-top {
+  height: 60%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#396a88), color-stop(#2f4c5e), to(#17242c));
+  background-image: linear-gradient(to bottom, #396a88, #2f4c5e, #17242c);
+  opacity: 1;
+  z-index: 4;
+}
+
+.card5 .card5-side {
+  top: 5%;
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.card5 .card5-side .card5-round1, .card5 .card5-side .card5-round2, .card5 .card5-side .card5-round3 {
+  height: 20px;
+  width: 20px;
+  margin: 0.1rem;
+  padding: 0;
+  border: 1px solid #461146;
+  border-radius: 0 50% 50% 0;
+}
+
+.card5 .card5-side .card5-round1 {
+  background-color: black;
+  background-image: url("../assets/icons/carrot-solid-orange-shade.png");
+  background-position: center;
+  background-size: 1.3rem;
+  background-repeat: no-repeat;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform: translateX(-2rem);
+          transform: translateX(-2rem);
+}
+
+.card5 .card5-side .card5-round2 {
+  background-color: #050505;
+  background-image: url("../assets/icons/fish-solid-blue-shade.png");
+  background-position: center;
+  background-size: 1.3rem;
+  background-repeat: no-repeat;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+  -webkit-transform: translateX(-2rem);
+          transform: translateX(-2rem);
+}
+
+.card5 .card5-side .card5-round3 {
+  background-color: black;
+  background-image: url("../assets/icons/leaf-solid-green-skade.png");
+  background-position: center;
+  background-size: 1.3rem;
+  background-repeat: no-repeat;
+  -webkit-transition: all 1.1s;
+  transition: all 1.1s;
+  -webkit-transform: translateX(-2rem);
+          transform: translateX(-2rem);
+}
+
+.card5 .card5-side .card5-round1:hover, .card5 .card5-side .card5-round2:hover, .card5 .card5-side .card5-round3:hover {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.card5 .card5-side i {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 0;
+  margin-top: 0;
+}
+
+.card5 .card5-bottom {
+  color: whitesmoke;
+  font-size: 0.9rem;
+  padding: 1rem;
+  z-index: 1;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.card5 .card5-bottom div div {
+  text-align: justify;
+}
+
+.card5:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.card5:hover .card5-top {
+  height: 100%;
+  -webkit-box-shadow: 5px 5px 20px rgba(10, 10, 10, 0.5), -5px 5px 20px rgba(10, 10, 10, 0.5);
+          box-shadow: 5px 5px 20px rgba(10, 10, 10, 0.5), -5px 5px 20px rgba(10, 10, 10, 0.5);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#396a88), color-stop(#2f4c5e), to(#17242c));
+  background-image: linear-gradient(to bottom, #396a88, #2f4c5e, #17242c);
+}
+
+.card5:hover .card5-round1, .card5:hover .card5-round2, .card5:hover .card5-round3 {
+  -webkit-transform: translateX(0.1rem);
+          transform: translateX(0.1rem);
+  z-index: 3;
+}
+
+.card5:hover .card5-side {
+  -webkit-transform: translateX(1.9rem);
+          transform: translateX(1.9rem);
+  z-index: 3;
+}
+
+.card5:hover .card5-bottom {
+  opacity: 1;
+  z-index: 4;
+}
+
+.card5:hover .card5__text {
+  opacity: 0;
 }
 
 .panel3 {
@@ -1392,13 +1648,221 @@ button {
           align-items: flex-start;
 }
 
+.card6 {
+  position: relative;
+  border: 2px solid blue;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.card6__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-clip-path: polygon(0% 0%, 0% 100%, 40% 100%, 51% 47%, 51% 47%, 51% 46%, 39% 100%, 99% 100%, 100% 0%);
+          clip-path: polygon(0% 0%, 0% 100%, 40% 100%, 51% 47%, 51% 47%, 51% 46%, 39% 100%, 99% 100%, 100% 0%);
+  z-index: 4;
+}
+
+.card6__picture {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-image: url("../assets/photos/purpleCrocuses01.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 280%;
+  z-index: -1;
+}
+
+.card6__text1 {
+  position: absolute;
+  width: 100%;
+  top: 5%;
+  left: 0;
+  text-align: center;
+  z-index: 6;
+  opacity: 1;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.card6__text2 {
+  position: absolute;
+  width: 100%;
+  top: 0%;
+  left: 0;
+  padding: 0.3rem 0;
+  background-color: rgba(242, 135, 252, 0.7);
+  color: #0f000d;
+  text-align: center;
+  z-index: 6;
+  opacity: 0;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.card6__text3 {
+  position: absolute;
+  width: 100%;
+  bottom: -20%;
+  left: 0;
+  padding: 0.3rem 0;
+  background-color: rgba(73, 27, 85, 0.7);
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+  z-index: 6;
+  opacity: 0;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.card6:hover .card6__overlay {
+  -webkit-animation: clipping 0.6s ease-in-out forwards;
+          animation: clipping 0.6s ease-in-out forwards;
+}
+
+.card6:hover .card6__text1 {
+  opacity: 0;
+}
+
+.card6:hover .card6__text2 {
+  opacity: 1;
+}
+
+.card6:hover .card6__text3 {
+  bottom: 0%;
+  opacity: 1;
+}
+
+@-webkit-keyframes clipping {
+  0% {
+    -webkit-clip-path: polygon(0% 0%, 0% 100%, 40% 100%, 51% 47%, 51% 47%, 51% 46%, 39% 100%, 99% 100%, 100% 0%);
+            clip-path: polygon(0% 0%, 0% 100%, 40% 100%, 51% 47%, 51% 47%, 51% 46%, 39% 100%, 99% 100%, 100% 0%);
+    opacity: 1;
+  }
+  10% {
+    -webkit-clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 49% 50%, 100% 100%, 65% 100%, 49% 50%, 25% 100%, 100% 100%, 100% 0%);
+            clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 49% 50%, 100% 100%, 65% 100%, 49% 50%, 25% 100%, 100% 100%, 100% 0%);
+  }
+  20% {
+    -webkit-clip-path: polygon(0% 0%, 0% 100%, 40% 100%, 51% 47%, 51% 47%, 51% 46%, 51% 46%, 100% 51%, 100% 51%, 100% 0%);
+            clip-path: polygon(0% 0%, 0% 100%, 40% 100%, 51% 47%, 51% 47%, 51% 46%, 51% 46%, 100% 51%, 100% 51%, 100% 0%);
+    opacity: 1;
+  }
+  40% {
+    -webkit-clip-path: polygon(0% 0%, 0% 100%, 40% 100%, 51% 47%, 51% 47%, 51% 46%, 100% 0, 100% 0, 100% 0%);
+            clip-path: polygon(0% 0%, 0% 100%, 40% 100%, 51% 47%, 51% 47%, 51% 46%, 100% 0, 100% 0, 100% 0%);
+    opacity: 0.9;
+  }
+  60% {
+    -webkit-clip-path: polygon(0% 0%, 0% 100%, 40% 100%, 51% 47%, 51% 47%, 51% 46%, 51% 1%, 50% 0, 53% 0);
+            clip-path: polygon(0% 0%, 0% 100%, 40% 100%, 51% 47%, 51% 47%, 51% 46%, 51% 1%, 50% 0, 53% 0);
+    opacity: 0.8;
+  }
+  80% {
+    -webkit-clip-path: polygon(0 51%, 0% 100%, 40% 100%, 51% 47%, 51% 47%, 51% 46%, 34% 49%, 16% 50%);
+            clip-path: polygon(0 51%, 0% 100%, 40% 100%, 51% 47%, 51% 47%, 51% 46%, 34% 49%, 16% 50%);
+    opacity: 0.7;
+  }
+  100% {
+    -webkit-clip-path: polygon(40% 100%, 40% 100%, 40% 100%, 51% 47%, 51% 47%);
+            clip-path: polygon(40% 100%, 40% 100%, 40% 100%, 51% 47%, 51% 47%);
+    opacity: 0;
+  }
+}
+
+@keyframes clipping {
+  0% {
+    -webkit-clip-path: polygon(0% 0%, 0% 100%, 40% 100%, 51% 47%, 51% 47%, 51% 46%, 39% 100%, 99% 100%, 100% 0%);
+            clip-path: polygon(0% 0%, 0% 100%, 40% 100%, 51% 47%, 51% 47%, 51% 46%, 39% 100%, 99% 100%, 100% 0%);
+    opacity: 1;
+  }
+  10% {
+    -webkit-clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 49% 50%, 100% 100%, 65% 100%, 49% 50%, 25% 100%, 100% 100%, 100% 0%);
+            clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 49% 50%, 100% 100%, 65% 100%, 49% 50%, 25% 100%, 100% 100%, 100% 0%);
+  }
+  20% {
+    -webkit-clip-path: polygon(0% 0%, 0% 100%, 40% 100%, 51% 47%, 51% 47%, 51% 46%, 51% 46%, 100% 51%, 100% 51%, 100% 0%);
+            clip-path: polygon(0% 0%, 0% 100%, 40% 100%, 51% 47%, 51% 47%, 51% 46%, 51% 46%, 100% 51%, 100% 51%, 100% 0%);
+    opacity: 1;
+  }
+  40% {
+    -webkit-clip-path: polygon(0% 0%, 0% 100%, 40% 100%, 51% 47%, 51% 47%, 51% 46%, 100% 0, 100% 0, 100% 0%);
+            clip-path: polygon(0% 0%, 0% 100%, 40% 100%, 51% 47%, 51% 47%, 51% 46%, 100% 0, 100% 0, 100% 0%);
+    opacity: 0.9;
+  }
+  60% {
+    -webkit-clip-path: polygon(0% 0%, 0% 100%, 40% 100%, 51% 47%, 51% 47%, 51% 46%, 51% 1%, 50% 0, 53% 0);
+            clip-path: polygon(0% 0%, 0% 100%, 40% 100%, 51% 47%, 51% 47%, 51% 46%, 51% 1%, 50% 0, 53% 0);
+    opacity: 0.8;
+  }
+  80% {
+    -webkit-clip-path: polygon(0 51%, 0% 100%, 40% 100%, 51% 47%, 51% 47%, 51% 46%, 34% 49%, 16% 50%);
+            clip-path: polygon(0 51%, 0% 100%, 40% 100%, 51% 47%, 51% 47%, 51% 46%, 34% 49%, 16% 50%);
+    opacity: 0.7;
+  }
+  100% {
+    -webkit-clip-path: polygon(40% 100%, 40% 100%, 40% 100%, 51% 47%, 51% 47%);
+            clip-path: polygon(40% 100%, 40% 100%, 40% 100%, 51% 47%, 51% 47%);
+    opacity: 0;
+  }
+}
+
 @media screen and (max-width: 360px) {
   .card1, .card2, .card3, .card4, .card5, .card6 {
+    overflow: hidden;
     height: 14rem;
     width: 10rem;
     padding: 0.1rem 0.1rem;
     margin: 0.2rem;
     border-radius: 10px;
+  }
+  .card1Info {
+    top: 76%;
+  }
+  .card1p {
+    top: 0%;
+    padding-bottom: 1rem;
+    margin-top: 3rem;
+  }
+  .card3 > div {
+    padding: 0;
+  }
+  .card3__title {
+    padding: 1rem;
+    -webkit-transform-origin: middle;
+            transform-origin: middle;
+    top: 5%;
+    left: 25%;
+  }
+  #click {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+    margin-top: 10rem;
+  }
+  #click:hover {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+  .card5 {
+    overflow: visible;
+  }
+  .card5 > div > div {
+    margin: 0;
+    padding: 0;
+    font-size: 0.6rem;
   }
 }
 
@@ -1553,10 +2017,10 @@ i:hover {
     font-size: 1rem;
     top: 62%;
   }
-  .card3 > div {
-    left: 1%;
-    padding: 1.15rem;
-    padding-top: 9rem;
+  i {
+    font-size: 1.7rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
   }
 }
 
