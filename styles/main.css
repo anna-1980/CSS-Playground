@@ -1679,10 +1679,10 @@ button {
   left: 0;
   margin: 0 auto;
   border-radius: 10px;
-  background-image: url("../assets/photos/purpleCrocuses01.png");
+  background-image: url("../assets/photos/purpleCrocuses02.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 280%;
+  background-size: 100%;
   z-index: -1;
 }
 
