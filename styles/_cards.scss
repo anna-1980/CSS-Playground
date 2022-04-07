@@ -501,10 +501,14 @@ width: 95%;
     z-index: 1;
     transition: all 1s;
     opacity: 0;
+    transition: all 0.5s;
+    overflow: scroll;
+
     div  div{
     text-align: justify;
+    padding-bottom: 1rem;
+    
     }
-    transition: all 0.5s;
   }
 }
 

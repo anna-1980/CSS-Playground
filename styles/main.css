@@ -1585,10 +1585,12 @@ button {
   opacity: 0;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  overflow: scroll;
 }
 
 .card5 .card5-bottom div div {
   text-align: justify;
+  padding-bottom: 1rem;
 }
 
 .card5:hover {
