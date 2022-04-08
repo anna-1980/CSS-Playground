@@ -1732,8 +1732,8 @@ button {
 }
 
 .card6:hover .card6__overlay {
-  -webkit-animation: clipping2 0.6s ease-in-out forwards;
-          animation: clipping2 0.6s ease-in-out forwards;
+  -webkit-animation: clipping2 0.4s ease-in-out forwards;
+          animation: clipping2 0.4s ease-in-out forwards;
 }
 
 .card6:hover .card6__text1 {
