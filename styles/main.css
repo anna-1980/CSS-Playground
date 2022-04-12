@@ -1980,7 +1980,7 @@ button {
   width: 100%;
   margin: 0 auto;
   text-align: center;
-  font-size: 3rem;
+  font-size: 4.5rem;
   font-family: 'Indie Flower', cursive;
   background: linear-gradient(170deg, yellow 10%, #ff9900 30%, #c10b7b 70%, #a30eb6 85%, #5c0eb6 95%) no-repeat;
   background-clip: text;
@@ -1992,9 +1992,8 @@ button {
   height: 40vw;
   width: 80vw;
   margin: auto;
-  margin-top: 4rem;
+  margin-top: 2.5vw;
   padding: 1rem;
-  border: 2px solid #d4d4d4;
   border-radius: 0px 20px 0px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2010,8 +2009,6 @@ button {
       -ms-flex-align: start;
           align-items: flex-start;
   background-color: transparent;
-  -webkit-box-shadow: 5px 5px 10px black;
-          box-shadow: 5px 5px 10px black;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -2021,8 +2018,11 @@ button {
   height: 25vw;
   width: 40vw;
   position: relative;
-  border-radius: 5%;
-  background-color: #78d40e;
+  margin-top: 6rem;
+  border-radius: 10px;
+  background-color: #78ed02;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .main-panel-1::before {
@@ -2032,7 +2032,7 @@ button {
   left: 0%;
   height: 100%;
   width: 100%;
-  border-radius: 5%;
+  border-radius: 10px;
   background: -webkit-gradient(linear, left top, right bottom, from(rgba(252, 252, 252, 0.7)), color-stop(rgba(252, 252, 252, 0.3)), to(rgba(255, 255, 255, 0)));
   background: linear-gradient(to bottom right, rgba(252, 252, 252, 0.7), rgba(252, 252, 252, 0.3), rgba(255, 255, 255, 0));
 }
@@ -2041,7 +2041,7 @@ button {
   height: 13.5vw;
   width: 10vw;
   margin: 0.5rem;
-  background: radial-gradient(circle at 50% -20%, red 10%, #ff2f00 25%, #eeb012 35%, #f0dd08 60%, #eeb012 75%, #ff2f00 88%, #db0404 100%);
+  background: radial-gradient(circle at 50% -20%, red 10%, #ff2f00 25%, #ee9d12 35%, #f0c208 60%, #eea812 75%, #ff2f00 88%, #db0404 100%);
   border-radius: 50% 50% 50% 50%/ 55% 55% 40% 40%;
   overflow: hidden;
 }
@@ -2256,7 +2256,7 @@ button {
   left: -6%;
   -webkit-transform: rotateZ(5deg);
           transform: rotateZ(5deg);
-  background: radial-gradient(circle at 50% -20%, red 10% 25%, #ff5100 25% 40%, #eeee12 40% 57%, #17a517 57% 75%, #0033ff 75% 90%, #470874 90% 100%);
+  background: radial-gradient(circle at 50% -20%, #e90a0a 10% 22%, #ff7700 25% 40%, #eeee12 42% 57%, #17a517 59% 75%, #0033ff 77% 90%, #470874 92% 100%);
   background-repeat: repeat;
   overflow: visible;
 }
@@ -2449,8 +2449,8 @@ button {
   position: absolute;
   top: 20%;
   left: 22%;
-  height: 2px;
-  width: 2px;
+  height: 20%;
+  width: 20%;
   background-color: white;
   border-radius: 50%;
 }
@@ -2470,8 +2470,8 @@ button {
   position: absolute;
   top: 20%;
   left: 20%;
-  height: 2px;
-  width: 2px;
+  height: 20%;
+  width: 20%;
   background-color: white;
   border-radius: 50%;
 }
@@ -2662,6 +2662,9 @@ button {
   .egg2_shadow {
     bottom: 12%;
   }
+  .wishes {
+    font-size: 3.5rem;
+  }
 }
 
 @media screen and (max-width: 760px) {
@@ -2671,6 +2674,12 @@ button {
   .egg2_shadow {
     bottom: 12.5%;
   }
+  .main-panel-1 {
+    margin-top: 3rem;
+  }
+  .wishes {
+    font-size: 3.2rem;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -2679,6 +2688,9 @@ button {
   }
   .egg2_shadow {
     bottom: 13%;
+  }
+  .wishes {
+    font-size: 3rem;
   }
 }
 
