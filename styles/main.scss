@@ -185,6 +185,12 @@ button{
     border: 1px solid #98a4ac;
 }
 
+@media  screen and (max-width: 500px) {
+    .buttonNav{
+        margin: 0;
+    }
+}
+
 @media screen and (min-width: 750px) {
 .buttons {
     height: content;
