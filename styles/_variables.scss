@@ -14,7 +14,7 @@ $gradient1-stop: rgb(230, 230, 92);
 $buttonSize: 2.5rem;
 $buttonPadding: 0.5rem 1rem;
 
-
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
 @mixin flex($column, $justify, $align) {
     display: flex;
