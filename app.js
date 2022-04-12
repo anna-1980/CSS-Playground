@@ -47,7 +47,16 @@ function(){
 }
 )
 
+/// Eggs
 
+const egg1 = document.querySelector('.egg1')
+const spots1 = document.querySelector('.spots1')
+
+egg1.addEventListener('click',function(){
+  spots1.classList.toggle("spots1");
+});
+
+///eggs
 
 
 

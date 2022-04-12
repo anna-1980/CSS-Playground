@@ -1,0 +1,769 @@
+$egg-shine-transparency:0.6;
+$shadow-transparency:0.4;
+$shadow: rgb(0, 0, 0);
+
+
+.wishes{
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 4.5rem;
+  font-family: 'Indie Flower', cursive;
+  background: linear-gradient(
+      170deg,
+      rgb(255, 255, 0) 10%,
+      rgb(255, 153, 0) 30%,
+      rgb(193, 11, 123)70%,
+      rgb(163, 14, 182) 85%,
+      rgb(92, 14, 182) 95%,
+      
+    )
+    no-repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+
+.container-random{
+  height: 40vw;
+  width: 80vw;
+  margin: auto;
+  margin-top: 2.5vw;
+  padding: 1rem;
+  // border: 2px solid rgba(212, 212, 212, 0.3);
+  border-radius: 0px 20px 0px 20px;
+  @include flex(column, flex-start, flex-start);
+  // background-color: $gradient1-start;
+  background-color: transparent;
+  // box-shadow: 5px 5px 10px black;
+  align-items: center;
+}
+
+.main-panel-1{
+  height: 25vw;
+  width: 40vw;
+  position: relative;
+  margin-top: 6rem;
+  border-radius: 10px;
+  // @include flex(column, flex-start, flex-start);
+  background-color: rgb(120, 237, 2);
+  transform: scale(1.5);
+}
+
+.main-panel-1::before{
+    content:"";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    background: linear-gradient( to bottom right, 
+    rgba(252, 252, 252, 0.7),
+    rgba(252, 252, 252, 0.3),
+    rgba(255, 255, 255, 0)
+    );
+}
+
+.egg1, .egg2, .egg3, .egg3-top {
+height: 13.5vw;
+width: 10vw;
+margin: 0.5rem;
+// background-color: rgb(250, 141, 46);
+
+// background: radial-gradient(circle at 50% -20%,
+// rgb(146, 129, 255) 10% , 
+// rgb(141, 90, 244) 25%, 
+// rgb(125, 78, 235) 35% , 
+// rgb(165, 75, 230) 60% , 
+// rgb(36, 129, 235) 75% , 
+// rgb(5, 129, 189) 88%, 
+// rgb(4, 129, 158) 100% );
+
+background: radial-gradient(circle at 50% -20%,
+rgb(255, 0, 0) 10% , 
+rgb(255, 47, 0) 25%, 
+rgb(238, 157, 18) 35% , 
+rgb(240, 194, 8) 60% , 
+rgb(238, 168, 18) 75% , 
+rgb(255, 47, 0) 88%, 
+rgb(219, 4, 4) 100% );
+
+
+border-radius: 50% 50% 50% 50%/ 55% 55% 40% 40% ;
+// border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+overflow: hidden;
+}
+
+.egg1_shadow, .egg2_shadow, .egg3_shadow, .egg3-top_shadow{
+  position: absolute;
+  bottom: 4.8vw;
+  // height: 0.9vw;
+  height: 5%;
+  width: 7vw;  
+  border-radius: 50%;
+  background: radial-gradient(
+    rgba(48, 48, 48, 0.8),
+    rgba(48, 48, 48, 0.6),
+    rgba(220, 220, 233, 0),
+    rgba(220, 220, 233, 0)
+  
+    );
+  // box-shadow: 
+  // 0px 0px 5px rgba($shadow, $shadow-transparency),
+   
+
+  //  inset 0px 5px 5px rgba(0, 0, 0, $shadow-transparency),
+  // inset 2px -2px 5px rgba(0, 0, 0, $shadow-transparency),
+  //  inset -2px -2px 5px rgba(0, 0, 0, $shadow-transparency),
+  // inset -2px 2px 5px rgba(0, 0, 0, $shadow-transparency)
+  ; 
+ 
+  z-index: 1;
+}
+
+.egg1_shadow{
+  left: 20%;
+}
+
+
+.egg1{
+  position: absolute;
+  left: 15%;
+  bottom: 20%;
+  // background: radial-gradient(circle ,
+  // rgb(238, 204, 248), 
+  // rgb(234, 56, 240), 
+  // rgb(23, 100, 114),
+  // rgb(228, 224, 15), 
+  // rgb(99, 216, 21), 
+  // rgb(55, 58, 225),
+  // rgb(234, 56, 240), 
+  // rgb(238, 204, 248));
+
+  background-image: linear-gradient(to top,
+  rgb(238, 204, 248), 
+  rgb(234, 56, 240), 
+  rgb(23, 100, 114),
+  rgb(25, 203, 216), 
+  rgb(15, 171, 132), 
+  rgb(55, 58, 225),
+  rgb(234, 56, 240), 
+  rgb(238, 204, 248),
+  );
+
+  background-size:200% 400%;
+  transform-origin: bottom center;
+  transform: rotateZ(-20deg);
+  z-index: 3;
+  overflow: visible;
+  
+
+  &:hover{
+    // transform: rotateZ(30deg);
+  animation: egg1-shade 1s ease-in forwards ;
+  // animation: egg1-wiggle 1s ease-in forwards ;
+  cursor: pointer;
+  
+  }
+  
+}
+
+.egg1::after{
+  content:"";
+  position: absolute;
+  top: 6%;
+  left: 27%;
+  width: 1vw;
+  height: 3vw;
+  border-radius: 95% 50% 50% 90%;
+  transform: rotateZ(36deg);
+
+  background-color: rgba(255, 255, 255, 0.7);
+
+  box-shadow: 
+  2px 2px 5px rgba(255, 255, 255, $egg-shine-transparency),
+  2px -2px 5px rgba(255, 255, 255, $egg-shine-transparency),
+  -2px -2px 5px rgba(255, 255, 255, $egg-shine-transparency),
+  -2px 2px 5px rgba(255, 255, 255, $egg-shine-transparency);
+  z-index: 2;
+}
+
+.egg1_spots{
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background-color: red;
+  visibility: hidden;
+
+}
+
+.egg1_spots{
+  div{
+    height: 10px;
+    width: 10px;
+  }
+}
+
+.spots1.egg1_spots{
+
+  visibility: visible;
+}
+
+
+@keyframes egg1-shade {
+
+  0%{
+    transform: rotateZ(-23deg);
+    background-position:0% 10%;
+
+  }
+  20%{
+    // transform: rotateY(70deg);
+    transform: rotateZ(-20deg);
+    background-position: 20% 15%;
+  }
+  30%{
+    // transform: rotateY(70deg);
+    transform: rotateZ(-23deg);
+    background-position: 30% 20%;
+  }
+  50%{
+    // transform: rotateY(70deg);
+    transform: rotateZ(-20deg);
+    background-position: 50% 25%;
+  }
+  60%{
+    // transform: rotateY(70deg);
+    transform: rotateZ(-23deg);
+    background-position: 60% 30%;
+  }
+  80%{
+    background-position: 70% 30%;
+    transform: rotateZ(-20deg);
+  }
+  100%{
+    background-position: 100% 50%;
+    transform: rotateZ(-23deg);
+  }
+  
+}
+
+@keyframes egg1-wiggle {
+
+  0%{
+    transform: rotateZ(-3deg);
+ 
+
+  }
+  50%{
+    // transform: rotateY(70deg);
+    transform: rotateZ(3deg);
+    
+  }
+  70%{
+     
+    transform: rotateZ(-3deg);
+  }
+  100%{
+     
+    transform: rotateZ(3deg);
+  }
+  
+}
+
+//egg 2
+
+.egg2_container{
+  position: relative;
+  margin: 0 auto;
+  height: 100%;
+  width: 30%;
+}
+
+.egg2_container:hover{
+  cursor: pointer;
+  .egg2{
+    animation: bounce 1s cubic-bezier(.15,1.79,.68,.34) 1 forwards;
+  }
+  .egg2_shadow{
+    animation: egg2_shadow_reduce 1s cubic-bezier(.15,1.79,.68,.34) forwards;
+
+  }
+}
+
+.egg2{
+  position: absolute;
+  z-index: 3;
+  bottom: 12%;
+  left: -6%;
+  transform: rotateZ(5deg);
+  // background-color: yellow;
+  background: radial-gradient(circle at 50% -20%,
+  rgb(233, 10, 10) 10% 22%, 
+  rgb(255, 119, 0) 25% 40%, 
+  rgb(238, 238, 18) 42% 57%, 
+  rgb(23, 165, 23) 59% 75%, 
+  rgb(0, 51, 255) 77% 90%, 
+  rgb(71, 8, 116) 92% 100%);
+  // background: radial-gradient(circle at 50% -20%,
+  //  rgb(233, 10, 10) 10% 25%, 
+  //  rgb(255, 119, 0) 25% 40%, 
+  //  rgb(238, 238, 18) 40% 57%, 
+  //  rgb(23, 165, 23) 57% 75%, 
+  //  rgb(0, 51, 255) 75% 90%, 
+  //  rgb(71, 8, 116) 90% 100%);
+ background-repeat:repeat ;
+overflow: visible;
+
+}
+.egg2::after{
+  content:"";
+  position: absolute;
+  top: 8%;
+  left: 25%;
+  width: 1vw;
+  height: 3vw;
+  border-radius: 95% 50% 50% 90%;
+  transform: rotateZ(30deg);
+
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 
+  2px 2px 5px rgba(255, 255, 255, $egg-shine-transparency),
+  2px -2px 5px rgba(255, 255, 255, $egg-shine-transparency),
+  -2px -2px 5px rgba(255, 255, 255, $egg-shine-transparency),
+  -2px 2px 5px rgba(255, 255, 255, $egg-shine-transparency);
+
+}
+
+.egg2_shadow{
+  left: 17%;
+  bottom: 12%;
+  width: 6vw;
+  transform-origin: bottom;
+}
+
+
+//radial-gradient(circle at 50% -10%
+//cubic-bezier(.15,1.79,.68,.34)
+@keyframes egg2_shadow_reduce {
+  0%{
+   transform: 
+   scaleX(1);
+
+  }
+  50%{
+    transform: 
+   scaleX(0.7)
+   
+  }
+  100%{
+    transform: 
+    scaleX(1)
+  }
+}
+@keyframes bounce {
+    0%{
+      transform: 
+      translateY(-0px)
+      rotateZ(5deg);
+
+    }
+    50%{
+      transform: 
+      translateY(-8px)
+      rotateZ(2deg);
+     
+    }
+    100%{
+      transform: 
+      translateY(-0px)
+      rotateZ(5deg);
+    }
+  
+}
+
+
+
+//egg3
+
+.egg3_container{
+  position: absolute;
+  // margin: 0 auto;
+  right: 17%;
+  top: 0%;
+  height: 100%;
+  width: 30%;
+}
+
+.egg3{
+  position: absolute;
+  right: 21%;
+  bottom: 21%;
+  z-index: 3;
+  transform-origin: bottom;
+  transform: rotateZ(20deg);
+  clip-path: polygon(100% 100%, 100% 36%, 89% 52%, 72% 39%, 60% 55%, 46% 42%, 29% 58%, 15% 39%, 0 48%, 0 100%);
+  // clip-path: polygon(100% 100%, 100% 39%, 89% 54%, 72% 41%, 59% 57%, 46% 35%, 30% 61%, 15% 29%, 0 41%, 0 100%);
+  border: 20px solod white;
+}
+
+.egg3::after{
+  content:"";
+  position: absolute;
+  top: 8%;
+  left: 25%;
+  width: 1vw;
+  height: 3vw;
+  border-radius: 95% 50% 50% 90%;
+  transform: rotateZ(30deg);
+
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 
+  2px 2px 5px rgba(255, 255, 255, $egg-shine-transparency),
+  2px -2px 5px rgba(255, 255, 255, $egg-shine-transparency),
+  -2px -2px 5px rgba(255, 255, 255, $egg-shine-transparency),
+  -2px 2px 5px rgba(255, 255, 255, $egg-shine-transparency);
+  
+  
+}
+.egg3_shadow{
+  right: 23%;
+}
+
+.egg3:hover{
+  cursor:pointer;
+}
+
+
+.egg3-top{
+  position: absolute;
+  right: 21%;
+  bottom: 21%;
+  z-index:3;
+  transform-origin: bottom;
+  transform: rotateZ(20deg);
+  // background-color: pink;
+  clip-path: polygon(100% 0, 100% 36%, 89% 52%, 72% 39%, 60% 55%, 46% 42%, 29% 58%, 15% 39%, 0 48%, 0 0);
+  // clip-path: polygon(100% 0, 100% 39%, 89% 54%, 72% 42%, 59% 58%, 46% 36%, 30% 62%, 15% 30%, 0 42%, 0 0);
+  // clip-path: polygon(100% 0, 100% 39%, 89% 54%, 72% 41%, 59% 57%, 46% 35%, 30% 61%, 15% 29%, 0 41%, 0 0);
+  // animation: crack 1s linear 1s forwards;
+}
+
+.egg3-top::after{
+  content:"";
+  position: absolute;
+  top: 6%;
+  left: 27%;
+  width: 1vw;
+  height: 3vw;
+  border-radius: 95% 50% 50% 90%;
+  transform: rotateZ(36deg);
+
+  background-color: rgba(255, 255, 255, 0.65);
+
+  box-shadow: 
+  2px 2px 5px rgba(255, 255, 255, $egg-shine-transparency),
+  2px -2px 5px rgba(255, 255, 255, $egg-shine-transparency),
+  -2px -2px 5px rgba(255, 255, 255, $egg-shine-transparency),
+  -2px 2px 5px rgba(255, 255, 255, $egg-shine-transparency);
+  z-index: 2;
+}
+
+.egg3-inside1{
+  position: absolute;
+  right:17%;
+  // right: -50%;
+  bottom: 35%;
+  height: 9vw;
+  width: 8vw;
+  margin: 0.5rem;
+  border-radius: 50% 50% 50% 50%;
+  z-index:1;
+  transform-origin: bottom;
+  transform: rotateZ(20deg);
+  background-color: rgb(252, 245, 62);
+}
+
+  .eye-left{
+  position: inherit;
+  top: 35%;
+  left: 30%;
+  height: 13%;
+  width: 15%;
+  background-color: black;
+  border-radius: 50%;
+
+      &::after{
+        content:"";
+      position: absolute;
+      top: 20%;
+      left: 22%;
+      height: 20%;
+      width: 20%;
+      background-color: white;
+      border-radius: 50%;
+      }
+  }
+
+  .eye-right{
+    position: inherit;
+    top: 35%;
+    right: 27%;
+    height: 13%;
+    width: 15%;
+    background-color: black;
+    border-radius: 50%;
+
+      &::after{
+        content:"";
+      position: absolute;
+      top: 20%;
+      left: 20%;
+      height: 20%;
+      width: 20%;
+      background-color: white;
+      border-radius: 50%;
+      }
+    }
+
+    .eye-right, .eye-left{
+      animation: eyeblink 2s  ease infinite;
+    }
+
+
+    .beak{
+      position: inherit;
+      top: 42%;
+      left: 33%;
+      width: 20%;
+      height: 20%;
+      transform: rotateZ(45deg);
+      background-color: rgb(255, 44, 7);
+      border-top: 6px solid rgb(218, 47, 17);
+      border-right: 4px solid rgb(209, 51, 23);
+      border-left:3px solid rgb(255, 104, 78); 
+       
+      transform-origin: bottom;
+      border-bottom-left-radius: 20%;
+      border-top-right-radius: 20%;
+      border-top-left-radius: 100%;
+       
+    }
+    
+
+    @keyframes eyeblink {
+
+      0%{
+        transform: scaleY(0.3);
+      }
+      20%{
+        transform: scaleY(1);
+      }
+
+      30%{
+        transform: scaleY(0.3);
+      }
+
+      40%{
+        transform: scaleY(1);
+      }
+
+      100%{
+        transform: scaleY(1);
+      }
+    }
+
+///egg crack animation
+
+.egg3_container:hover{
+
+  cursor: pointer;
+
+    .egg3-top{
+      transform: 
+      // translate(1%, -2%)
+      rotateZ(20deg);
+      animation: crack 2s linear 0.5s forwards;
+    
+      // clip-path: polygon(100% 0, 100% 36%, 89% 52%, 72% 39%, 60% 55%, 46% 34%, 30% 60%, 15% 26%, 0 41%, 0 0);
+    
+      transition: all 0.5s;
+    }
+ 
+}
+
+.eye-left{
+  position: inherit;
+  top: 35%;
+  left: 30%;
+
+}
+
+@keyframes crack {
+  
+  0%{
+    clip-path: polygon(100% 0, 100% 36%, 89% 52%, 72% 39%, 60% 55%, 46% 42%, 29% 58%, 15% 39%, 0 48%, 0 0);
+
+    transform: 
+    translate(1%, -2%)
+    rotateZ(20deg);
+  }
+  25%{
+    clip-path: polygon(100% 0, 100% 36%, 89% 52%, 72% 39%, 60% 55%, 46% 42%, 29% 58%, 15% 39%, 0 48%, 0 0);
+    transform: 
+    translate(1%, -2%)
+    rotateZ(20deg)
+     ;
+  }
+  50%{
+    clip-path: polygon(100% 0, 100% 36%, 89% 52%, 72% 39%, 60% 55%, 46% 42%, 29% 58%, 15% 39%, 0 48%, 0 0);
+    transform: 
+    translate(1%, -2%)
+    rotateZ(20deg)
+    ;
+  }
+  75%{
+    clip-path: polygon(100% 0, 100% 36%, 89% 52%, 72% 39%, 60% 55%, 46% 42%, 29% 58%, 15% 39%, 0 48%, 0 0);
+    transform: 
+    translate(1%, -2%)
+    rotateZ(20deg)
+    // translate(1%, -2%);
+  }
+  80%{
+    clip-path: polygon(100% 0, 100% 36%, 89% 52%, 72% 39%, 60% 55%, 46% 42%, 29% 58%, 15% 39%, 0 48%, 0 0);
+
+    transform: 
+    
+    rotateZ(20deg)
+    translate(1%, -2%)
+
+  }
+  90%{
+    clip-path: polygon(100% 0, 100% 36%, 89% 52%, 72% 39%, 60% 55%, 46% 42%, 29% 58%, 15% 39%, 0 48%, 0 0);
+
+    transform: 
+    
+    rotateZ(20deg)
+    translate(3%, -10%);
+
+  }
+  100%{
+    clip-path: polygon(100% 0, 100% 36%, 89% 52%, 72% 39%, 60% 55%, 46% 42%, 29% 58%, 15% 39%, 0 48%, 0 0);
+    transform: 
+    
+    rotateZ(20deg)
+    translate(4%, -23%);
+
+  }
+
+}
+
+@media  screen and (max-width: 900px) {
+
+  .egg1_shadow, .egg3_shadow{
+    bottom: 5vw;}
+
+  .egg2_shadow{
+    bottom: 12%;
+}
+
+.wishes{
+  font-size: 3.5rem;
+}
+}
+
+@media  screen and (max-width: 760px) {
+
+  .egg1_shadow, .egg3_shadow{
+    bottom: 5.1vw;
+}
+
+  .egg2_shadow{
+     bottom: 12.5%;
+}
+.main-panel-1{
+  margin-top:3rem;
+}
+.wishes{
+  font-size: 3.2rem;
+}
+}
+
+@media  screen and (max-width: 600px) {
+
+  .egg1_shadow, .egg3_shadow{
+    bottom: 5vw;
+}
+
+  .egg2_shadow{
+     bottom: 13%;
+}
+.wishes{
+  font-size: 3rem;
+}
+
+
+}
+
+@media  screen and (max-width: 500px) {
+
+  .egg1_shadow, .egg3_shadow{
+    bottom: 5.2vw;
+  
+}
+  .egg2_shadow{
+    bottom: 14.5%;
+  }
+  .wishes{
+    font-size: 2rem;
+  }
+}
+
+@media  screen and (max-width: 400px) {
+
+  .egg1_shadow, .egg3_shadow{
+    bottom: 5.4vw;
+}
+  .egg2_shadow{
+    left: 23%;
+    bottom: 16%;
+  }
+
+  .wishes{
+    font-size: 1.5rem;
+  }
+}
+
+@media  screen and (max-width: 300px) {
+
+  .egg1_shadow, .egg3_shadow{
+    bottom: 5.7vw;
+    
+  }
+
+  .egg2_shadow{
+    bottom: 17%;
+  }
+
+  .wishes{
+    font-size: 1.3rem;
+  }
+
+  
+}
+
+ 
+
+ //useful for later use
+  // border-left: 6px solid #fefefe;
+  // border-top-left-radius: 100%;
+  // border-bottom-left-radius: 20%;
+  // width: 35px;
+  // height: 50px;
+  // top:170px;
+  // filter: drop-shadow(30px 0 #90be6d) drop-shadow(160px 0 #90be6d) drop-shadow(120px 0 #90be6d);
+ 
