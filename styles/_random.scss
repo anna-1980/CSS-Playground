@@ -28,14 +28,16 @@ $shadow: rgb(0, 0, 0);
 
 
 .container-random{
-  height: content;
-  width: 80%;
+  height: 40vw;
+  width: 80vw;
   margin: auto;
   margin-top: 4rem;
+  padding: 1rem;
   border: 2px solid rgb(212, 212, 212);
   border-radius: 0px 20px 0px 20px;
   @include flex(column, flex-start, flex-start);
-  background-color: rgb(255, 255, 255);
+  // background-color: $gradient1-start;
+  background-color: transparent;
   box-shadow: 5px 5px 10px black;
   align-items: center;
 }
@@ -44,8 +46,10 @@ $shadow: rgb(0, 0, 0);
   height: 25vw;
   width: 40vw;
   position: relative;
+  
+  border-radius: 5%;
   // @include flex(column, flex-start, flex-start);
-  background-color: rgb(80, 221, 10);
+  background-color: rgb(120, 212, 14);
 
 }
 
@@ -56,9 +60,11 @@ $shadow: rgb(0, 0, 0);
     left: 0%;
     height: 100%;
     width: 100%;
+    border-radius: 5%;
     background: linear-gradient( to bottom right, 
-    rgba(254, 243, 88, 0.7),
-    rgba(255, 255, 255, 0.1)
+    rgba(252, 252, 252, 0.7),
+    rgba(252, 252, 252, 0.3),
+    rgba(255, 255, 255, 0)
     );
 }
 
@@ -186,7 +192,15 @@ overflow: hidden;
 
 }
 
+.egg1_spots{
+  div{
+    height: 10px;
+    width: 10px;
+  }
+}
+
 .spots1.egg1_spots{
+
   visibility: visible;
 }
 
@@ -445,11 +459,11 @@ overflow: visible;
 
 .egg3-inside1{
   position: absolute;
-  // right:16%;
-  right: -50%;
-  bottom: 31%;
-  height: 10vw;
-  width: 9vw;
+  right:17%;
+  // right: -50%;
+  bottom: 35%;
+  height: 9vw;
+  width: 8vw;
   margin: 0.5rem;
   border-radius: 50% 50% 50% 50%;
   z-index:1;
@@ -507,8 +521,21 @@ overflow: visible;
 
     .beak{
       position: inherit;
-      top: 35%;
-      right: 27%;
+      top: 42%;
+      left: 33%;
+      width: 20%;
+      height: 20%;
+      transform: rotateZ(45deg);
+      background-color: rgb(255, 44, 7);
+      border-top: 6px solid rgb(218, 47, 17);
+      border-right: 4px solid rgb(209, 51, 23);
+      border-left:3px solid rgb(255, 104, 78); 
+       
+      transform-origin: bottom;
+      border-bottom-left-radius: 20%;
+      border-top-right-radius: 20%;
+      border-top-left-radius: 100%;
+       
     }
     
 
@@ -661,7 +688,7 @@ overflow: visible;
     bottom: 14.5%;
   }
   .wishes{
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 }
 
@@ -676,7 +703,7 @@ overflow: visible;
   }
 
   .wishes{
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -692,72 +719,20 @@ overflow: visible;
   }
 
   .wishes{
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 
-  .eye-left, .eye-right{
-     
-  }
+  
 }
 
-// try the grass
+ 
 
-.grass {
-  position: absolute;
-  // border-top: 1px solid #ffffff;
-  border-left: 6px solid #fefefe;
-  border-top-left-radius: 100%;
-  border-bottom-left-radius: 20%;
-  width: 35px;
-  height: 50px;
-  top:170px;
+ //useful for later use
+  // border-left: 6px solid #fefefe;
+  // border-top-left-radius: 100%;
+  // border-bottom-left-radius: 20%;
+  // width: 35px;
+  // height: 50px;
+  // top:170px;
   // filter: drop-shadow(30px 0 #90be6d) drop-shadow(160px 0 #90be6d) drop-shadow(120px 0 #90be6d);
-}
-
-// .grass:before {
-//   content:"";
-//   position: absolute;
-//   border-top: 1px solid #90be6d;
-//   border-right: 6px solid #90be6d;
-//   width: 35px;
-//   height: 50px;
-//   border-top-right-radius: 100%;
-//   top:0;
-//   filter: drop-shadow(30px 0 #90be6d) drop-shadow(30px 0 #90be6d);
-//   left:-60px;
-// }
-
-// .grass:after {
-//   content:"";
-//   position: absolute;
-//   border-top: 1px solid #90be6d;
-//   border-right: 6px solid #90be6d;
-//   width: 20px;
-//   height: 35px;
-//   border-top-right-radius: 100%;
-//   top:20px;
-//   filter: drop-shadow(30px 0 #90be6d) drop-shadow(30px 0 #90be6d);
-//   left:-60px;
-// }
-
-
-///// - alternatives:
-
-// .egg2{
-//   position: absolute;
-//   z-index: 3;
-//   bottom: 15%;
-//   right: 40%;
-//   transform: rotateZ(5deg);
-//   // background-color: yellow;
-//   background: radial-gradient(circle at 50% -20%,
-//    rgb(255, 0, 0) 10% 25%, 
-//    rgb(255, 81, 0) 25% 40%, 
-//    rgb(238, 238, 18) 40% 57%, 
-//    rgb(23, 165, 23) 57% 75%, 
-//    rgb(0, 51, 255) 75% 90%, 
-//    rgb(71, 8, 116) 90% 100%);
-//  background-repeat:repeat ;
-// overflow: visible;
-
-//} 
+ 
