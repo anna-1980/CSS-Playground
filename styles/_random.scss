@@ -785,7 +785,7 @@ overflow: hidden;
     }
 
     .crack3{
-      animation: crack 2s linear 0.5s forwards;
+      animation: crack 2s linear 0.1s forwards;
     }
  
 }
@@ -803,27 +803,27 @@ overflow: hidden;
     clip-path: polygon(100% 0, 100% 36%, 89% 52%, 72% 39%, 60% 55%, 46% 42%, 29% 58%, 15% 39%, 0 48%, 0 0);
 
     transform: 
-    translate(1%, -2%)
+    translate(2%, -3%)
     rotateZ(20deg);
   }
   25%{
     clip-path: polygon(100% 0, 100% 36%, 89% 52%, 72% 39%, 60% 55%, 46% 42%, 29% 58%, 15% 39%, 0 48%, 0 0);
     transform: 
-    translate(1%, -2%)
+    translate(2%, -3%)
     rotateZ(20deg)
      ;
   }
   50%{
     clip-path: polygon(100% 0, 100% 36%, 89% 52%, 72% 39%, 60% 55%, 46% 42%, 29% 58%, 15% 39%, 0 48%, 0 0);
     transform: 
-    translate(1%, -2%)
+    translate(2%, -3%)
     rotateZ(20deg)
     ;
   }
   75%{
     clip-path: polygon(100% 0, 100% 36%, 89% 52%, 72% 39%, 60% 55%, 46% 42%, 29% 58%, 15% 39%, 0 48%, 0 0);
     transform: 
-    translate(1%, -2%)
+    translate(2%, -3%)
     rotateZ(20deg)
     // translate(1%, -2%);
   }
@@ -833,7 +833,7 @@ overflow: hidden;
     transform: 
     
     rotateZ(20deg)
-    translate(1%, -2%)
+    translate(2%, -3%)
 
   }
   90%{
@@ -842,7 +842,7 @@ overflow: hidden;
     transform: 
     
     rotateZ(20deg)
-    translate(3%, -10%);
+    translate(0%, -11%);
 
   }
   100%{
@@ -850,7 +850,7 @@ overflow: hidden;
     transform: 
     
     rotateZ(20deg)
-    translate(4%, -23%);
+    translate(0%, -23%);
 
   }
 
