@@ -2072,7 +2072,7 @@ button {
   -webkit-transform: rotateZ(-20deg);
           transform: rotateZ(-20deg);
   z-index: 3;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .egg1:hover {
@@ -2094,23 +2094,54 @@ button {
   background-color: rgba(255, 255, 255, 0.7);
   -webkit-box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.6), 2px -2px 5px rgba(255, 255, 255, 0.6), -2px -2px 5px rgba(255, 255, 255, 0.6), -2px 2px 5px rgba(255, 255, 255, 0.6);
           box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.6), 2px -2px 5px rgba(255, 255, 255, 0.6), -2px -2px 5px rgba(255, 255, 255, 0.6), -2px 2px 5px rgba(255, 255, 255, 0.6);
-  z-index: 2;
+  z-index: 3;
 }
 
 .egg1_spots {
-  position: absolute;
-  height: 20px;
-  width: 20px;
-  background-color: red;
+  position: inherit;
+  left: -20%;
+  bottom: 32%;
+  height: 1.3vw;
+  width: 1.3vw;
+  border-radius: 50%;
+  background-color: #e0e0e0;
   visibility: hidden;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: background-color 2s;
+  transition: background-color 2s;
+  -webkit-transform: rotateZ(-5deg);
+          transform: rotateZ(-5deg);
+  z-index: 1;
+  -webkit-filter: drop-shadow(2.2vw 2.4vw 0vw #e0e0e0) drop-shadow(2.2vw 2.4vw 0vw #e0e0e0) drop-shadow(2.2vw 2.4vw 0vw #e0e0e0) drop-shadow(2.2vw -2.4vw 0vw #e0e0e0) drop-shadow(2.2vw 2.4vw 0vw #e0e0e0) drop-shadow(2.2vw -2.4vw 0vw #e0e0e0) drop-shadow(2.2vw -2.4vw 0vw #e0e0e0) drop-shadow(2.2vw -2.4vw 0vw #e0e0e0);
+          filter: drop-shadow(2.2vw 2.4vw 0vw #e0e0e0) drop-shadow(2.2vw 2.4vw 0vw #e0e0e0) drop-shadow(2.2vw 2.4vw 0vw #e0e0e0) drop-shadow(2.2vw -2.4vw 0vw #e0e0e0) drop-shadow(2.2vw 2.4vw 0vw #e0e0e0) drop-shadow(2.2vw -2.4vw 0vw #e0e0e0) drop-shadow(2.2vw -2.4vw 0vw #e0e0e0) drop-shadow(2.2vw -2.4vw 0vw #e0e0e0);
+  -webkit-animation: colorChange 4s ease infinite;
+          animation: colorChange 4s ease infinite;
 }
 
-.egg1_spots div {
-  height: 10px;
-  width: 10px;
+.egg1_spots.spots1 {
+  visibility: visible;
 }
 
-.spots1.egg1_spots {
+.egg2_spots {
+  position: inherit;
+  left: -40%;
+  bottom: 22%;
+  height: 0.7vw;
+  width: 0.7vw;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  visibility: hidden;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: background-color 2s;
+  transition: background-color 2s;
+  z-index: 1;
+  -webkit-filter: drop-shadow(2.2vw 2.4vw 0vw #e0e0e0) drop-shadow(2.2vw 2.4vw 0vw #e0e0e0) drop-shadow(2.2vw 2.4vw 0vw #e0e0e0) drop-shadow(2.2vw -2.4vw 0vw #e0e0e0) drop-shadow(2.2vw 2.4vw 0vw #e0e0e0) drop-shadow(2.2vw -2.4vw 0vw #e0e0e0) drop-shadow(2.2vw -2.4vw 0vw #e0e0e0) drop-shadow(2.2vw -2.4vw 0vw #e0e0e0);
+          filter: drop-shadow(2.2vw 2.4vw 0vw #e0e0e0) drop-shadow(2.2vw 2.4vw 0vw #e0e0e0) drop-shadow(2.2vw 2.4vw 0vw #e0e0e0) drop-shadow(2.2vw -2.4vw 0vw #e0e0e0) drop-shadow(2.2vw 2.4vw 0vw #e0e0e0) drop-shadow(2.2vw -2.4vw 0vw #e0e0e0) drop-shadow(2.2vw -2.4vw 0vw #e0e0e0) drop-shadow(2.2vw -2.4vw 0vw #e0e0e0);
+}
+
+.egg2_spots.spots2 {
   visibility: visible;
 }
 
@@ -2228,6 +2259,52 @@ button {
   }
 }
 
+@-webkit-keyframes colorChange {
+  0% {
+    background-color: #d6d468;
+    -webkit-filter: drop-shadow(2.2vw 2.4vw 0vw #d6d468) drop-shadow(2.2vw 2.4vw 0vw #d6d468) drop-shadow(2.2vw 2.4vw 0vw #d6d468) drop-shadow(2.2vw -2.4vw 0vw #d6d468) drop-shadow(2.2vw 2.4vw 0vw #d6d468) drop-shadow(2.2vw -2.4vw 0vw #d6d468) drop-shadow(2.2vw -2.4vw 0vw #d6d468) drop-shadow(2.2vw -2.4vw 0vw #d6d468);
+            filter: drop-shadow(2.2vw 2.4vw 0vw #d6d468) drop-shadow(2.2vw 2.4vw 0vw #d6d468) drop-shadow(2.2vw 2.4vw 0vw #d6d468) drop-shadow(2.2vw -2.4vw 0vw #d6d468) drop-shadow(2.2vw 2.4vw 0vw #d6d468) drop-shadow(2.2vw -2.4vw 0vw #d6d468) drop-shadow(2.2vw -2.4vw 0vw #d6d468) drop-shadow(2.2vw -2.4vw 0vw #d6d468);
+  }
+  25% {
+    background-color: #72f0d0;
+    -webkit-filter: drop-shadow(2.2vw 2.4vw 0vw #72f0d0) drop-shadow(2.2vw 2.4vw 0vw #72f0d0) drop-shadow(2.2vw 2.4vw 0vw #72f0d0) drop-shadow(2.2vw -2.4vw 0vw #72f0d0) drop-shadow(2.2vw 2.4vw 0vw #72f0d0) drop-shadow(2.2vw -2.4vw 0vw #72f0d0) drop-shadow(2.2vw -2.4vw 0vw #72f0d0) drop-shadow(2.2vw -2.4vw 0vw #72f0d0);
+            filter: drop-shadow(2.2vw 2.4vw 0vw #72f0d0) drop-shadow(2.2vw 2.4vw 0vw #72f0d0) drop-shadow(2.2vw 2.4vw 0vw #72f0d0) drop-shadow(2.2vw -2.4vw 0vw #72f0d0) drop-shadow(2.2vw 2.4vw 0vw #72f0d0) drop-shadow(2.2vw -2.4vw 0vw #72f0d0) drop-shadow(2.2vw -2.4vw 0vw #72f0d0) drop-shadow(2.2vw -2.4vw 0vw #72f0d0);
+  }
+  75% {
+    background-color: #e89df1;
+    -webkit-filter: drop-shadow(2.2vw 2.4vw 0vw #e89df1) drop-shadow(2.2vw 2.4vw 0vw #e89df1) drop-shadow(2.2vw 2.4vw 0vw #e89df1) drop-shadow(2.2vw -2.4vw 0vw #e89df1) drop-shadow(2.2vw 2.4vw 0vw #e89df1) drop-shadow(2.2vw -2.4vw 0vw #e89df1) drop-shadow(2.2vw -2.4vw 0vw #e89df1) drop-shadow(2.2vw -2.4vw 0vw #e89df1);
+            filter: drop-shadow(2.2vw 2.4vw 0vw #e89df1) drop-shadow(2.2vw 2.4vw 0vw #e89df1) drop-shadow(2.2vw 2.4vw 0vw #e89df1) drop-shadow(2.2vw -2.4vw 0vw #e89df1) drop-shadow(2.2vw 2.4vw 0vw #e89df1) drop-shadow(2.2vw -2.4vw 0vw #e89df1) drop-shadow(2.2vw -2.4vw 0vw #e89df1) drop-shadow(2.2vw -2.4vw 0vw #e89df1);
+  }
+  100% {
+    background-color: #d6d468;
+    -webkit-filter: drop-shadow(2.2vw 2.4vw 0vw #d6d468) drop-shadow(2.2vw 2.4vw 0vw #d6d468) drop-shadow(2.2vw 2.4vw 0vw #d6d468) drop-shadow(2.2vw -2.4vw 0vw #d6d468) drop-shadow(2.2vw 2.4vw 0vw #d6d468) drop-shadow(2.2vw -2.4vw 0vw #d6d468) drop-shadow(2.2vw -2.4vw 0vw #d6d468) drop-shadow(2.2vw -2.4vw 0vw #d6d468);
+            filter: drop-shadow(2.2vw 2.4vw 0vw #d6d468) drop-shadow(2.2vw 2.4vw 0vw #d6d468) drop-shadow(2.2vw 2.4vw 0vw #d6d468) drop-shadow(2.2vw -2.4vw 0vw #d6d468) drop-shadow(2.2vw 2.4vw 0vw #d6d468) drop-shadow(2.2vw -2.4vw 0vw #d6d468) drop-shadow(2.2vw -2.4vw 0vw #d6d468) drop-shadow(2.2vw -2.4vw 0vw #d6d468);
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    background-color: #d6d468;
+    -webkit-filter: drop-shadow(2.2vw 2.4vw 0vw #d6d468) drop-shadow(2.2vw 2.4vw 0vw #d6d468) drop-shadow(2.2vw 2.4vw 0vw #d6d468) drop-shadow(2.2vw -2.4vw 0vw #d6d468) drop-shadow(2.2vw 2.4vw 0vw #d6d468) drop-shadow(2.2vw -2.4vw 0vw #d6d468) drop-shadow(2.2vw -2.4vw 0vw #d6d468) drop-shadow(2.2vw -2.4vw 0vw #d6d468);
+            filter: drop-shadow(2.2vw 2.4vw 0vw #d6d468) drop-shadow(2.2vw 2.4vw 0vw #d6d468) drop-shadow(2.2vw 2.4vw 0vw #d6d468) drop-shadow(2.2vw -2.4vw 0vw #d6d468) drop-shadow(2.2vw 2.4vw 0vw #d6d468) drop-shadow(2.2vw -2.4vw 0vw #d6d468) drop-shadow(2.2vw -2.4vw 0vw #d6d468) drop-shadow(2.2vw -2.4vw 0vw #d6d468);
+  }
+  25% {
+    background-color: #72f0d0;
+    -webkit-filter: drop-shadow(2.2vw 2.4vw 0vw #72f0d0) drop-shadow(2.2vw 2.4vw 0vw #72f0d0) drop-shadow(2.2vw 2.4vw 0vw #72f0d0) drop-shadow(2.2vw -2.4vw 0vw #72f0d0) drop-shadow(2.2vw 2.4vw 0vw #72f0d0) drop-shadow(2.2vw -2.4vw 0vw #72f0d0) drop-shadow(2.2vw -2.4vw 0vw #72f0d0) drop-shadow(2.2vw -2.4vw 0vw #72f0d0);
+            filter: drop-shadow(2.2vw 2.4vw 0vw #72f0d0) drop-shadow(2.2vw 2.4vw 0vw #72f0d0) drop-shadow(2.2vw 2.4vw 0vw #72f0d0) drop-shadow(2.2vw -2.4vw 0vw #72f0d0) drop-shadow(2.2vw 2.4vw 0vw #72f0d0) drop-shadow(2.2vw -2.4vw 0vw #72f0d0) drop-shadow(2.2vw -2.4vw 0vw #72f0d0) drop-shadow(2.2vw -2.4vw 0vw #72f0d0);
+  }
+  75% {
+    background-color: #e89df1;
+    -webkit-filter: drop-shadow(2.2vw 2.4vw 0vw #e89df1) drop-shadow(2.2vw 2.4vw 0vw #e89df1) drop-shadow(2.2vw 2.4vw 0vw #e89df1) drop-shadow(2.2vw -2.4vw 0vw #e89df1) drop-shadow(2.2vw 2.4vw 0vw #e89df1) drop-shadow(2.2vw -2.4vw 0vw #e89df1) drop-shadow(2.2vw -2.4vw 0vw #e89df1) drop-shadow(2.2vw -2.4vw 0vw #e89df1);
+            filter: drop-shadow(2.2vw 2.4vw 0vw #e89df1) drop-shadow(2.2vw 2.4vw 0vw #e89df1) drop-shadow(2.2vw 2.4vw 0vw #e89df1) drop-shadow(2.2vw -2.4vw 0vw #e89df1) drop-shadow(2.2vw 2.4vw 0vw #e89df1) drop-shadow(2.2vw -2.4vw 0vw #e89df1) drop-shadow(2.2vw -2.4vw 0vw #e89df1) drop-shadow(2.2vw -2.4vw 0vw #e89df1);
+  }
+  100% {
+    background-color: #d6d468;
+    -webkit-filter: drop-shadow(2.2vw 2.4vw 0vw #d6d468) drop-shadow(2.2vw 2.4vw 0vw #d6d468) drop-shadow(2.2vw 2.4vw 0vw #d6d468) drop-shadow(2.2vw -2.4vw 0vw #d6d468) drop-shadow(2.2vw 2.4vw 0vw #d6d468) drop-shadow(2.2vw -2.4vw 0vw #d6d468) drop-shadow(2.2vw -2.4vw 0vw #d6d468) drop-shadow(2.2vw -2.4vw 0vw #d6d468);
+            filter: drop-shadow(2.2vw 2.4vw 0vw #d6d468) drop-shadow(2.2vw 2.4vw 0vw #d6d468) drop-shadow(2.2vw 2.4vw 0vw #d6d468) drop-shadow(2.2vw -2.4vw 0vw #d6d468) drop-shadow(2.2vw 2.4vw 0vw #d6d468) drop-shadow(2.2vw -2.4vw 0vw #d6d468) drop-shadow(2.2vw -2.4vw 0vw #d6d468) drop-shadow(2.2vw -2.4vw 0vw #d6d468);
+  }
+}
+
 .egg2_container {
   position: relative;
   margin: 0 auto;
@@ -2258,7 +2335,7 @@ button {
           transform: rotateZ(5deg);
   background: radial-gradient(circle at 50% -20%, #e90a0a 10% 22%, #ff7700 25% 40%, #eeee12 42% 57%, #17a517 59% 75%, #0033ff 77% 90%, #470874 92% 100%);
   background-repeat: repeat;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .egg2::after {
