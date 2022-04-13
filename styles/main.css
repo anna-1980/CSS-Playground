@@ -2338,6 +2338,10 @@ button {
   overflow: hidden;
 }
 
+.color2 {
+  background: radial-gradient(circle at 50% -20%, #470874 10% 11%, #0033ff 25% 40%, #17a517 42% 57%, #eeee12 59% 75%, #ff7700 77% 90%, #e90a0a 92% 100%);
+}
+
 .egg2::after {
   content: "";
   position: absolute;

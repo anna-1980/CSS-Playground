@@ -496,8 +496,19 @@ overflow: hidden;
   //  rgb(71, 8, 116) 90% 100%);
  background-repeat:repeat ;
  overflow: hidden;
-
 }
+
+.color2{
+  background: radial-gradient(circle at 50% -20%,
+  
+  rgb(71, 8, 116) 10% 11%,
+  rgb(0, 51, 255) 25% 40%, 
+  rgb(23, 165, 23) 42% 57%,
+  rgb(238, 238, 18) 59% 75%, 
+  rgb(255, 119, 0) 77% 90%, 
+  rgb(233, 10, 10) 92% 100%); 
+}
+
 .egg2::after{
   content:"";
   position: absolute;

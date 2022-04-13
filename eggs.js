@@ -1,11 +1,12 @@
 const egg1 = document.querySelector('.egg1')
 const egg2 = document.querySelector('.egg2_container')
+const egg2color = document.querySelector('.egg2')
 const egg3 = document.querySelector('.egg3')
 const spots1 = document.querySelector('.egg1_spots')
 const spots2 = document.querySelector('.egg2_spots')
 const crack3 = document.querySelector('.egg3-top')
  
-console.log(egg1);
+// console.log(egg2color);
 
 egg1.addEventListener('click', 
 function(){
@@ -24,11 +25,15 @@ egg2.addEventListener('click',
 function(){
   console.log('egg 2 click');
   spots2.classList.toggle("spots2");
+  console.log(egg2color)
+  egg2color.classList.toggle('color2')
+  
 }
 )
 egg3.addEventListener('click', 
 function(){
   console.log('egg 3 click');
+  
   crack3.classList.toggle("crack3");
 }
 )
