@@ -1,5 +1,5 @@
 const egg1 = document.querySelector('.egg1')
-const egg2 = document.querySelector('.egg2')
+const egg2 = document.querySelector('.egg2_container')
 const egg3 = document.querySelector('.egg3')
 const spots1 = document.querySelector('.egg1_spots')
 const spots2 = document.querySelector('.egg2_spots')
