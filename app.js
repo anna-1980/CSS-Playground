@@ -13,6 +13,11 @@ const close2 = document.querySelector('.close2')
 const close3 = document.querySelector('.close3')
 const close4 = document.querySelector('.close4')
 
+/// Eggs
+
+const egg1 = document.querySelector('.egg1')
+const spots1 = document.querySelector('.spots1')
+
 code1.addEventListener('click',function(){
   overlay1.classList.toggle("overlay1");
 });
@@ -49,11 +54,10 @@ function(){
 
 /// Eggs
 
-const egg1 = document.querySelector('.egg1')
-const spots1 = document.querySelector('.spots1')
-
+console.log(egg1)
 egg1.addEventListener('click',function(){
-  spots1.classList.toggle("spots1");
+  console.log("egg1 clicked on")
+  // spots1.classList.toggle("spots1");
 });
 
 ///eggs
