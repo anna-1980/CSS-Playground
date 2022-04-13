@@ -2104,7 +2104,7 @@ button {
   height: 1.3vw;
   width: 1.3vw;
   border-radius: 50%;
-  background-color: #e0e0e0;
+  background-color: #f1ebeb;
   visibility: hidden;
   -webkit-transform-origin: center;
           transform-origin: center;
@@ -2113,8 +2113,8 @@ button {
   -webkit-transform: rotateZ(-5deg);
           transform: rotateZ(-5deg);
   z-index: 1;
-  -webkit-filter: drop-shadow(2.2vw 2.4vw 0vw #e0e0e0) drop-shadow(2.2vw 2.4vw 0vw #e0e0e0) drop-shadow(2.2vw 2.4vw 0vw #e0e0e0) drop-shadow(2.2vw -2.4vw 0vw #e0e0e0) drop-shadow(2.2vw 2.4vw 0vw #e0e0e0) drop-shadow(2.2vw -2.4vw 0vw #e0e0e0) drop-shadow(2.2vw -2.4vw 0vw #e0e0e0) drop-shadow(2.2vw -2.4vw 0vw #e0e0e0);
-          filter: drop-shadow(2.2vw 2.4vw 0vw #e0e0e0) drop-shadow(2.2vw 2.4vw 0vw #e0e0e0) drop-shadow(2.2vw 2.4vw 0vw #e0e0e0) drop-shadow(2.2vw -2.4vw 0vw #e0e0e0) drop-shadow(2.2vw 2.4vw 0vw #e0e0e0) drop-shadow(2.2vw -2.4vw 0vw #e0e0e0) drop-shadow(2.2vw -2.4vw 0vw #e0e0e0) drop-shadow(2.2vw -2.4vw 0vw #e0e0e0);
+  -webkit-filter: drop-shadow(2.2vw 2.4vw 0vw #f1ebeb) drop-shadow(2.2vw 2.4vw 0vw #f1ebeb) drop-shadow(2.2vw 2.4vw 0vw #f1ebeb) drop-shadow(2.2vw -2.4vw 0vw #f1ebeb) drop-shadow(2.2vw 2.4vw 0vw #f1ebeb) drop-shadow(2.2vw -2.4vw 0vw #f1ebeb) drop-shadow(2.2vw -2.4vw 0vw #f1ebeb) drop-shadow(2.2vw -2.4vw 0vw #f1ebeb);
+          filter: drop-shadow(2.2vw 2.4vw 0vw #f1ebeb) drop-shadow(2.2vw 2.4vw 0vw #f1ebeb) drop-shadow(2.2vw 2.4vw 0vw #f1ebeb) drop-shadow(2.2vw -2.4vw 0vw #f1ebeb) drop-shadow(2.2vw 2.4vw 0vw #f1ebeb) drop-shadow(2.2vw -2.4vw 0vw #f1ebeb) drop-shadow(2.2vw -2.4vw 0vw #f1ebeb) drop-shadow(2.2vw -2.4vw 0vw #f1ebeb);
   -webkit-animation: colorChange 4s ease infinite;
           animation: colorChange 4s ease infinite;
 }
@@ -2130,15 +2130,15 @@ button {
   height: 0.7vw;
   width: 0.7vw;
   border-radius: 50%;
-  background-color: #e0e0e0;
+  background-color: #f1ebeb;
   visibility: hidden;
   -webkit-transform-origin: center;
           transform-origin: center;
   -webkit-transition: background-color 2s;
   transition: background-color 2s;
   z-index: 1;
-  -webkit-filter: drop-shadow(2.2vw 2.4vw 0vw #e0e0e0) drop-shadow(2.2vw 2.4vw 0vw #e0e0e0) drop-shadow(2.2vw 2.4vw 0vw #e0e0e0) drop-shadow(2.2vw -2.4vw 0vw #e0e0e0) drop-shadow(2.2vw 2.4vw 0vw #e0e0e0) drop-shadow(2.2vw -2.4vw 0vw #e0e0e0) drop-shadow(2.2vw -2.4vw 0vw #e0e0e0) drop-shadow(2.2vw -2.4vw 0vw #e0e0e0);
-          filter: drop-shadow(2.2vw 2.4vw 0vw #e0e0e0) drop-shadow(2.2vw 2.4vw 0vw #e0e0e0) drop-shadow(2.2vw 2.4vw 0vw #e0e0e0) drop-shadow(2.2vw -2.4vw 0vw #e0e0e0) drop-shadow(2.2vw 2.4vw 0vw #e0e0e0) drop-shadow(2.2vw -2.4vw 0vw #e0e0e0) drop-shadow(2.2vw -2.4vw 0vw #e0e0e0) drop-shadow(2.2vw -2.4vw 0vw #e0e0e0);
+  -webkit-filter: drop-shadow(2.2vw 2.4vw 0vw #f1ebeb) drop-shadow(2.2vw 2.4vw 0vw #f1ebeb) drop-shadow(2.2vw 2.4vw 0vw #f1ebeb) drop-shadow(2.2vw -2.4vw 0vw #f1ebeb) drop-shadow(2.2vw 2.4vw 0vw #f1ebeb) drop-shadow(2.2vw -2.4vw 0vw #f1ebeb) drop-shadow(2.2vw -2.4vw 0vw #f1ebeb) drop-shadow(2.2vw -2.4vw 0vw #f1ebeb);
+          filter: drop-shadow(2.2vw 2.4vw 0vw #f1ebeb) drop-shadow(2.2vw 2.4vw 0vw #f1ebeb) drop-shadow(2.2vw 2.4vw 0vw #f1ebeb) drop-shadow(2.2vw -2.4vw 0vw #f1ebeb) drop-shadow(2.2vw 2.4vw 0vw #f1ebeb) drop-shadow(2.2vw -2.4vw 0vw #f1ebeb) drop-shadow(2.2vw -2.4vw 0vw #f1ebeb) drop-shadow(2.2vw -2.4vw 0vw #f1ebeb);
 }
 
 .egg2_spots.spots2 {
