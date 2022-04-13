@@ -2630,10 +2630,13 @@ button {
 .egg3_container:hover .egg3-top {
   -webkit-transform: rotateZ(20deg);
           transform: rotateZ(20deg);
-  -webkit-animation: crack 2s linear 0.5s forwards;
-          animation: crack 2s linear 0.5s forwards;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+}
+
+.egg3_container:hover .crack3 {
+  -webkit-animation: crack 2s linear 0.5s forwards;
+          animation: crack 2s linear 0.5s forwards;
 }
 
 .eye-left {

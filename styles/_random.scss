@@ -766,11 +766,15 @@ overflow: hidden;
       transform: 
       // translate(1%, -2%)
       rotateZ(20deg);
-      animation: crack 2s linear 0.5s forwards;
+      // animation: crack 2s linear 0.5s forwards;
     
       // clip-path: polygon(100% 0, 100% 36%, 89% 52%, 72% 39%, 60% 55%, 46% 34%, 30% 60%, 15% 26%, 0 41%, 0 0);
     
       transition: all 0.5s;
+    }
+
+    .crack3{
+      animation: crack 2s linear 0.5s forwards;
     }
  
 }
