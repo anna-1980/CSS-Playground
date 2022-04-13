@@ -132,7 +132,7 @@ overflow: hidden;
 
 .egg1{
   position: absolute;
-  left: 15%;
+  left: 20%;
   bottom: 20%;
   // background: radial-gradient(circle ,
   // rgb(238, 204, 248), 
@@ -299,7 +299,7 @@ overflow: hidden;
   position: absolute;
   z-index: 3;
   bottom: 12%;
-  left: -6%;
+  left: 3%;
   transform: rotateZ(5deg);
   // background-color: yellow;
   background: radial-gradient(circle at 50% -20%,
@@ -340,7 +340,7 @@ overflow: visible;
 }
 
 .egg2_shadow{
-  left: 17%;
+  left: 23%;
   bottom: 12%;
   width: 6vw;
   transform-origin: bottom;
@@ -401,7 +401,7 @@ overflow: visible;
 
 .egg3{
   position: absolute;
-  right: 21%;
+  right: 10%;
   bottom: 21%;
   z-index: 3;
   transform-origin: bottom;
@@ -432,7 +432,7 @@ overflow: visible;
   
 }
 .egg3_shadow{
-  right: 23%;
+  right: 10%;
 }
 
 .egg3:hover{
@@ -442,7 +442,7 @@ overflow: visible;
 
 .egg3-top{
   position: absolute;
-  right: 21%;
+  right: 10%;
   bottom: 21%;
   z-index:3;
   transform-origin: bottom;
@@ -476,7 +476,7 @@ overflow: visible;
 
 .egg3-inside1{
   position: absolute;
-  right:17%;
+  right:7%;
   // right: -50%;
   bottom: 35%;
   height: 9vw;
@@ -697,11 +697,14 @@ overflow: visible;
 @media  screen and (max-width: 600px) {
 
   .egg1_shadow, .egg3_shadow{
-    bottom: 5vw;
+    bottom: 5.2vw;
 }
-
+  .egg1_shadow{
+    left: 23%;
+  }
   .egg2_shadow{
      bottom: 13%;
+     left: 27%;
 }
 .wishes{
   font-size: 3rem;
@@ -712,9 +715,14 @@ overflow: visible;
 
 @media  screen and (max-width: 500px) {
 
-  .egg1_shadow, .egg3_shadow{
+  .egg1_shadow{
     bottom: 5.2vw;
-  
+}
+
+.egg3_shadow{
+  bottom: 5.35vw;
+  right: 20%;
+   
 }
   .egg2_shadow{
     bottom: 14.5%;
@@ -722,13 +730,22 @@ overflow: visible;
   .wishes{
     font-size: 2rem;
   }
+  .main-panel-1{
+    margin-top: 4rem;
+    transform: scale(2);
+  }
 }
 
 @media  screen and (max-width: 400px) {
 
-  .egg1_shadow, .egg3_shadow{
+  .egg1_shadow{
     bottom: 5.4vw;
 }
+  .egg3_shadow{
+    bottom: 5.7vw;
+    right: 20%;
+     
+  }
   .egg2_shadow{
     left: 23%;
     bottom: 16%;
@@ -737,9 +754,14 @@ overflow: visible;
   .wishes{
     font-size: 1.5rem;
   }
+
+  .main-panel-1{
+    margin-top: 4rem;
+    transform: scale(2);
+  }
 }
 
-@media  screen and (max-width: 300px) {
+@media  screen and (max-width: 360px) {
 
   .egg1_shadow, .egg3_shadow{
     bottom: 5.7vw;
@@ -747,13 +769,18 @@ overflow: visible;
   }
 
   .egg2_shadow{
-    bottom: 17%;
+    bottom: 16%;
+    left: 29%;
   }
 
   .wishes{
     font-size: 1.3rem;
   }
-
+  .main-panel-1{
+     
+    margin-top: 3rem;
+    transform: scale(2);
+  }
   
 }
 
