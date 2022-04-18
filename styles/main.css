@@ -1988,6 +1988,29 @@ button {
   color: transparent;
 }
 
+#backToMyWeb2 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: transparent;
+  border: none;
+  padding: 0vw 0.7vw;
+  color: #58ac03;
+  font-size: 1vw;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+  caret-color: yellow;
+  z-index: 10;
+}
+
+#instruction {
+  padding: 0.3rem;
+  font-size: 1rem;
+  text-align: center;
+  color: #01e1ff;
+  opacity: 0.4;
+}
+
 .container-random {
   height: 40vw;
   width: 80vw;
@@ -2017,12 +2040,15 @@ button {
 .main-panel-1 {
   height: 25vw;
   width: 40vw;
-  position: relative;
-  margin-top: 6rem;
+  position: absolute;
+  margin-top: 13vw;
+  margin-bottom: 0;
   border-radius: 10px;
   background-color: #78ed02;
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+  -webkit-transform: scale(2.2);
+          transform: scale(2.2);
+  -webkit-box-shadow: 3px 3px 8px black;
+          box-shadow: 3px 3px 8px black;
 }
 
 .main-panel-1::before {
@@ -2120,28 +2146,6 @@ button {
 }
 
 .egg1_spots.spots1 {
-  visibility: visible;
-}
-
-.egg2_spots {
-  position: inherit;
-  left: -40%;
-  bottom: 22%;
-  height: 0.7vw;
-  width: 0.7vw;
-  border-radius: 50%;
-  background-color: #f1ebeb;
-  visibility: hidden;
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  -webkit-transition: background-color 2s;
-  transition: background-color 2s;
-  z-index: 1;
-  -webkit-filter: drop-shadow(2.2vw 2.4vw 0vw #f1ebeb) drop-shadow(2.2vw 2.4vw 0vw #f1ebeb) drop-shadow(2.2vw 2.4vw 0vw #f1ebeb) drop-shadow(2.2vw -2.4vw 0vw #f1ebeb) drop-shadow(2.2vw 2.4vw 0vw #f1ebeb) drop-shadow(2.2vw -2.4vw 0vw #f1ebeb) drop-shadow(2.2vw -2.4vw 0vw #f1ebeb) drop-shadow(2.2vw -2.4vw 0vw #f1ebeb);
-          filter: drop-shadow(2.2vw 2.4vw 0vw #f1ebeb) drop-shadow(2.2vw 2.4vw 0vw #f1ebeb) drop-shadow(2.2vw 2.4vw 0vw #f1ebeb) drop-shadow(2.2vw -2.4vw 0vw #f1ebeb) drop-shadow(2.2vw 2.4vw 0vw #f1ebeb) drop-shadow(2.2vw -2.4vw 0vw #f1ebeb) drop-shadow(2.2vw -2.4vw 0vw #f1ebeb) drop-shadow(2.2vw -2.4vw 0vw #f1ebeb);
-}
-
-.egg2_spots.spots2 {
   visibility: visible;
 }
 
@@ -2310,15 +2314,22 @@ button {
   margin: 0 auto;
   height: 100%;
   width: 30%;
+  border-radius: 50%;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
-.egg2_container:hover {
-  cursor: pointer;
-}
-
-.egg2_container:hover .egg2 {
+.egg2_container .egg2-top.crack2 {
   -webkit-animation: bounce 1s cubic-bezier(0.15, 1.79, 0.68, 0.34) 1 forwards;
           animation: bounce 1s cubic-bezier(0.15, 1.79, 0.68, 0.34) 1 forwards;
+  -webkit-animation: crack2 0.6s linear 0.1s forwards;
+          animation: crack2 0.6s linear 0.1s forwards;
+}
+
+.egg2_container:hover .egg2, .egg2_container:hover .egg2-top, .egg2_container:hover .egg2-inside1 {
+  -webkit-animation: bounce 1s cubic-bezier(0.15, 1.79, 0.68, 0.34) 1 forwards;
+          animation: bounce 1s cubic-bezier(0.15, 1.79, 0.68, 0.34) 1 forwards;
+  cursor: pointer;
 }
 
 .egg2_container:hover .egg2_shadow {
@@ -2336,6 +2347,28 @@ button {
   background: radial-gradient(circle at 50% -20%, #e90a0a 10% 22%, #ff7700 25% 40%, #eeee12 42% 57%, #17a517 59% 75%, #0033ff 77% 90%, #470874 92% 100%);
   background-repeat: repeat;
   overflow: hidden;
+  -webkit-clip-path: polygon(45% 44%, 63% 34%, 81% 47%, 100% 28%, 100% 100%, 0 100%, 0 26%, 14% 43%, 28% 32%);
+          clip-path: polygon(45% 44%, 63% 34%, 81% 47%, 100% 28%, 100% 100%, 0 100%, 0 26%, 14% 43%, 28% 32%);
+}
+
+.egg2-top {
+  position: absolute;
+  height: 13.5vw;
+  width: 10vw;
+  margin: 0.5rem;
+  border-radius: 50% 50% 50% 50%/ 55% 55% 40% 40%;
+  bottom: 11.5%;
+  left: 3%;
+  -webkit-transform: rotateZ(5deg);
+          transform: rotateZ(5deg);
+  z-index: 3;
+  background: radial-gradient(circle at 50% -20%, #e90a0a 10% 22%, #ff7700 25% 40%, #eeee12 42% 57%, #17a517 59% 75%, #0033ff 77% 90%, #470874 92% 100%);
+  -webkit-clip-path: polygon(45% 44%, 63% 34%, 81% 47%, 100% 28%, 100% 0, 0 0, 0 26%, 14% 43%, 28% 32%);
+          clip-path: polygon(45% 44%, 63% 34%, 81% 47%, 100% 28%, 100% 0, 0 0, 0 26%, 14% 43%, 28% 32%);
+}
+
+.egg2-top:hover {
+  cursor: pointer;
 }
 
 .color2 {
@@ -2363,6 +2396,64 @@ button {
   width: 6vw;
   -webkit-transform-origin: bottom;
           transform-origin: bottom;
+}
+
+.egg2_spots {
+  position: inherit;
+  left: -40%;
+  bottom: 22%;
+  height: 0.7vw;
+  width: 0.7vw;
+  border-radius: 50%;
+  background-color: #f1ebeb;
+  visibility: hidden;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: background-color 2s;
+  transition: background-color 2s;
+  z-index: 10;
+  -webkit-filter: drop-shadow(2.2vw 2.4vw 0vw #f1ebeb) drop-shadow(2.2vw 2.4vw 0vw #f1ebeb) drop-shadow(2.2vw 2.4vw 0vw #f1ebeb) drop-shadow(2.2vw -2.4vw 0vw #f1ebeb) drop-shadow(2.2vw 2.4vw 0vw #f1ebeb) drop-shadow(2.2vw -2.4vw 0vw #f1ebeb) drop-shadow(2.2vw -2.4vw 0vw #f1ebeb) drop-shadow(2.2vw -2.4vw 0vw #f1ebeb);
+          filter: drop-shadow(2.2vw 2.4vw 0vw #f1ebeb) drop-shadow(2.2vw 2.4vw 0vw #f1ebeb) drop-shadow(2.2vw 2.4vw 0vw #f1ebeb) drop-shadow(2.2vw -2.4vw 0vw #f1ebeb) drop-shadow(2.2vw 2.4vw 0vw #f1ebeb) drop-shadow(2.2vw -2.4vw 0vw #f1ebeb) drop-shadow(2.2vw -2.4vw 0vw #f1ebeb) drop-shadow(2.2vw -2.4vw 0vw #f1ebeb);
+}
+
+.spots2-top {
+  position: inherit;
+  left: -40%;
+  bottom: 22%;
+  height: 0.7vw;
+  width: 0.7vw;
+  border-radius: 50%;
+  background-color: #f1ebeb;
+  visibility: visible;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  z-index: 10;
+  -webkit-filter: drop-shadow(2.2vw 2.4vw 0vw #f1ebeb) drop-shadow(2.2vw 2.4vw 0vw #f1ebeb) drop-shadow(2.2vw 2.4vw 0vw #f1ebeb) drop-shadow(2.2vw -2.4vw 0vw #f1ebeb) drop-shadow(2.2vw 2.4vw 0vw #f1ebeb) drop-shadow(2.2vw -2.4vw 0vw #f1ebeb) drop-shadow(2.2vw -2.4vw 0vw #f1ebeb) drop-shadow(2.2vw -2.4vw 0vw #f1ebeb);
+          filter: drop-shadow(2.2vw 2.4vw 0vw #f1ebeb) drop-shadow(2.2vw 2.4vw 0vw #f1ebeb) drop-shadow(2.2vw 2.4vw 0vw #f1ebeb) drop-shadow(2.2vw -2.4vw 0vw #f1ebeb) drop-shadow(2.2vw 2.4vw 0vw #f1ebeb) drop-shadow(2.2vw -2.4vw 0vw #f1ebeb) drop-shadow(2.2vw -2.4vw 0vw #f1ebeb) drop-shadow(2.2vw -2.4vw 0vw #f1ebeb);
+}
+
+.egg2_spots.spots2 {
+  visibility: visible;
+}
+
+.egg2-top.egg2_spots-top {
+  visibility: visible;
+}
+
+.egg2-inside1 {
+  position: absolute;
+  right: 1.6vw;
+  bottom: 28%;
+  height: 9vw;
+  width: 8vw;
+  margin: 0.5rem;
+  border-radius: 50% 50% 50% 50%;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transform: rotateZ(5deg);
+          transform: rotateZ(5deg);
+  background-color: #fee000;
+  z-index: 3;
 }
 
 @-webkit-keyframes egg2_shadow_reduce {
@@ -2425,12 +2516,106 @@ button {
   }
 }
 
+@-webkit-keyframes crack2 {
+  0% {
+    -webkit-clip-path: polygon(45% 44%, 63% 34%, 81% 47%, 100% 28%, 100% 0, 0 0, 0 26%, 14% 43%, 28% 32%);
+            clip-path: polygon(45% 44%, 63% 34%, 81% 47%, 100% 28%, 100% 0, 0 0, 0 26%, 14% 43%, 28% 32%);
+    -webkit-transform: translate(-1%, -3%);
+            transform: translate(-1%, -3%);
+  }
+  25% {
+    -webkit-clip-path: polygon(45% 44%, 63% 34%, 81% 47%, 100% 28%, 100% 0, 0 0, 0 26%, 14% 43%, 28% 32%);
+            clip-path: polygon(45% 44%, 63% 34%, 81% 47%, 100% 28%, 100% 0, 0 0, 0 26%, 14% 43%, 28% 32%);
+    -webkit-transform: translate(-1%, -3%);
+            transform: translate(-1%, -3%);
+  }
+  50% {
+    -webkit-clip-path: polygon(45% 44%, 63% 34%, 81% 47%, 100% 28%, 100% 0, 0 0, 0 26%, 14% 43%, 28% 32%);
+            clip-path: polygon(45% 44%, 63% 34%, 81% 47%, 100% 28%, 100% 0, 0 0, 0 26%, 14% 43%, 28% 32%);
+    -webkit-transform: translate(-1%, -3%);
+            transform: translate(-1%, -3%);
+  }
+  75% {
+    -webkit-clip-path: polygon(45% 44%, 63% 34%, 81% 47%, 100% 28%, 100% 0, 0 0, 0 26%, 14% 43%, 28% 32%);
+            clip-path: polygon(45% 44%, 63% 34%, 81% 47%, 100% 28%, 100% 0, 0 0, 0 26%, 14% 43%, 28% 32%);
+    -webkit-transform: translate(-1%, -3%);
+            transform: translate(-1%, -3%);
+  }
+  80% {
+    -webkit-clip-path: polygon(45% 44%, 63% 34%, 81% 47%, 100% 28%, 100% 0, 0 0, 0 26%, 14% 43%, 28% 32%);
+            clip-path: polygon(45% 44%, 63% 34%, 81% 47%, 100% 28%, 100% 0, 0 0, 0 26%, 14% 43%, 28% 32%);
+    -webkit-transform: translate(-1%, -3%);
+            transform: translate(-1%, -3%);
+  }
+  90% {
+    -webkit-clip-path: polygon(45% 44%, 63% 34%, 81% 47%, 100% 28%, 100% 0, 0 0, 0 26%, 14% 43%, 28% 32%);
+            clip-path: polygon(45% 44%, 63% 34%, 81% 47%, 100% 28%, 100% 0, 0 0, 0 26%, 14% 43%, 28% 32%);
+    -webkit-transform: translate(-2%, -11%);
+            transform: translate(-2%, -11%);
+  }
+  100% {
+    -webkit-clip-path: polygon(45% 44%, 63% 34%, 81% 47%, 100% 28%, 100% 0, 0 0, 0 26%, 14% 43%, 28% 32%);
+            clip-path: polygon(45% 44%, 63% 34%, 81% 47%, 100% 28%, 100% 0, 0 0, 0 26%, 14% 43%, 28% 32%);
+    -webkit-transform: translate(-3%, -23%);
+            transform: translate(-3%, -23%);
+  }
+}
+
+@keyframes crack2 {
+  0% {
+    -webkit-clip-path: polygon(45% 44%, 63% 34%, 81% 47%, 100% 28%, 100% 0, 0 0, 0 26%, 14% 43%, 28% 32%);
+            clip-path: polygon(45% 44%, 63% 34%, 81% 47%, 100% 28%, 100% 0, 0 0, 0 26%, 14% 43%, 28% 32%);
+    -webkit-transform: translate(-1%, -3%);
+            transform: translate(-1%, -3%);
+  }
+  25% {
+    -webkit-clip-path: polygon(45% 44%, 63% 34%, 81% 47%, 100% 28%, 100% 0, 0 0, 0 26%, 14% 43%, 28% 32%);
+            clip-path: polygon(45% 44%, 63% 34%, 81% 47%, 100% 28%, 100% 0, 0 0, 0 26%, 14% 43%, 28% 32%);
+    -webkit-transform: translate(-1%, -3%);
+            transform: translate(-1%, -3%);
+  }
+  50% {
+    -webkit-clip-path: polygon(45% 44%, 63% 34%, 81% 47%, 100% 28%, 100% 0, 0 0, 0 26%, 14% 43%, 28% 32%);
+            clip-path: polygon(45% 44%, 63% 34%, 81% 47%, 100% 28%, 100% 0, 0 0, 0 26%, 14% 43%, 28% 32%);
+    -webkit-transform: translate(-1%, -3%);
+            transform: translate(-1%, -3%);
+  }
+  75% {
+    -webkit-clip-path: polygon(45% 44%, 63% 34%, 81% 47%, 100% 28%, 100% 0, 0 0, 0 26%, 14% 43%, 28% 32%);
+            clip-path: polygon(45% 44%, 63% 34%, 81% 47%, 100% 28%, 100% 0, 0 0, 0 26%, 14% 43%, 28% 32%);
+    -webkit-transform: translate(-1%, -3%);
+            transform: translate(-1%, -3%);
+  }
+  80% {
+    -webkit-clip-path: polygon(45% 44%, 63% 34%, 81% 47%, 100% 28%, 100% 0, 0 0, 0 26%, 14% 43%, 28% 32%);
+            clip-path: polygon(45% 44%, 63% 34%, 81% 47%, 100% 28%, 100% 0, 0 0, 0 26%, 14% 43%, 28% 32%);
+    -webkit-transform: translate(-1%, -3%);
+            transform: translate(-1%, -3%);
+  }
+  90% {
+    -webkit-clip-path: polygon(45% 44%, 63% 34%, 81% 47%, 100% 28%, 100% 0, 0 0, 0 26%, 14% 43%, 28% 32%);
+            clip-path: polygon(45% 44%, 63% 34%, 81% 47%, 100% 28%, 100% 0, 0 0, 0 26%, 14% 43%, 28% 32%);
+    -webkit-transform: translate(-2%, -11%);
+            transform: translate(-2%, -11%);
+  }
+  100% {
+    -webkit-clip-path: polygon(45% 44%, 63% 34%, 81% 47%, 100% 28%, 100% 0, 0 0, 0 26%, 14% 43%, 28% 32%);
+            clip-path: polygon(45% 44%, 63% 34%, 81% 47%, 100% 28%, 100% 0, 0 0, 0 26%, 14% 43%, 28% 32%);
+    -webkit-transform: translate(-3%, -23%);
+            transform: translate(-3%, -23%);
+  }
+}
+
 .egg3_container {
   position: absolute;
   right: 17%;
   top: 0%;
   height: 100%;
   width: 30%;
+  border-bottom-right-radius: 300%;
+  border-bottom-left-radius: 0%;
+  border-top-right-radius: 10%;
+  overflow: visible;
 }
 
 .egg3 {
@@ -2481,6 +2666,7 @@ button {
           transform: rotateZ(20deg);
   -webkit-clip-path: polygon(100% 0, 100% 36%, 89% 52%, 72% 39%, 60% 55%, 46% 42%, 29% 58%, 15% 39%, 0 48%, 0 0);
           clip-path: polygon(100% 0, 100% 36%, 89% 52%, 72% 39%, 60% 55%, 46% 42%, 29% 58%, 15% 39%, 0 48%, 0 0);
+  cursor: pointer;
 }
 
 .egg3-top::after {
@@ -2627,18 +2813,7 @@ button {
   }
 }
 
-.egg3_container:hover {
-  cursor: pointer;
-}
-
-.egg3_container:hover .egg3-top {
-  -webkit-transform: rotateZ(20deg);
-          transform: rotateZ(20deg);
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-.egg3_container:hover .crack3 {
+.crack3 {
   -webkit-animation: crack 2s linear 0.1s forwards;
           animation: crack 2s linear 0.1s forwards;
 }
@@ -2739,6 +2914,16 @@ button {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .main-panel-1 {
+    margin-top: 13rem;
+    -webkit-transform: scale(1.8);
+            transform: scale(1.8);
+    max-width: 590px;
+    max-height: 368px;
+  }
+}
+
 @media screen and (max-width: 900px) {
   .egg1_shadow, .egg3_shadow {
     bottom: 5vw;
@@ -2758,11 +2943,13 @@ button {
   .egg2_shadow {
     bottom: 12.5%;
   }
-  .main-panel-1 {
-    margin-top: 3rem;
-  }
   .wishes {
     font-size: 3.2rem;
+  }
+  .main-panel-1 {
+    margin-top: 5rem;
+    -webkit-transform: scale(1.55);
+            transform: scale(1.55);
   }
 }
 
@@ -2783,6 +2970,12 @@ button {
 }
 
 @media screen and (max-width: 500px) {
+  #instruction {
+    font-size: 0.8rem;
+  }
+  #backToMyWeb {
+    font-size: 0.7rem;
+  }
   .egg1_shadow {
     bottom: 5.2vw;
   }
@@ -2801,9 +2994,19 @@ button {
     -webkit-transform: scale(2);
             transform: scale(2);
   }
+  .egg2-inside1 {
+    right: 0.5vw;
+  }
 }
 
 @media screen and (max-width: 400px) {
+  #instruction {
+    font-size: 0.7rem;
+  }
+  #backToMyWeb {
+    font-size: 0.6rem;
+    padding-right: 0.5rem;
+  }
   .egg1_shadow {
     bottom: 5.4vw;
   }
@@ -2826,6 +3029,10 @@ button {
 }
 
 @media screen and (max-width: 360px) {
+  #backToMyWeb {
+    font-size: 0.5rem;
+    padding-right: 0.5rem;
+  }
   .egg1_shadow, .egg3_shadow {
     bottom: 5.7vw;
   }
