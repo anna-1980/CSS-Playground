@@ -993,7 +993,7 @@ button {
           align-items: flex-start;
 }
 
-.card1, .card2, .card3, .card4, .card5, .card6 {
+.card1, .card2, .card3, .card4, .card5, .card6, .card7 {
   height: 16rem;
   width: 12rem;
   padding: 0.1rem 0.1rem;
@@ -1393,7 +1393,7 @@ button {
           box-shadow: 0px -5px 10px rgba(5, 5, 5, 0.2);
 }
 
-.front, .back {
+.card4_front, .card4_back {
   position: absolute;
   top: 0;
   left: 0;
@@ -1405,9 +1405,9 @@ button {
           backface-visibility: hidden;
 }
 
-.front {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#d1dfdc), color-stop(#9ab4af), to(#5f7e77));
-  background-image: linear-gradient(to right bottom, #d1dfdc, #9ab4af, #5f7e77);
+.card4_front {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#e288f8), color-stop(#ce65cc), to(#67055d));
+  background-image: linear-gradient(to right bottom, #e288f8, #ce65cc, #67055d);
   background-size: 20rem;
   background-position: bottom;
   color: black;
@@ -1426,7 +1426,7 @@ button {
           align-items: center;
 }
 
-.back {
+.card4_back {
   background-image: -webkit-gradient(linear, left top, right bottom, from(#7fb4a9), color-stop(#528b80), to(#183d35));
   background-image: linear-gradient(to right bottom, #7fb4a9, #528b80, #183d35);
   color: white;
@@ -1825,7 +1825,7 @@ button {
 }
 
 @media screen and (max-width: 360px) {
-  .card1, .card2, .card3, .card4, .card5, .card6 {
+  .card1, .card2, .card3, .card4, .card5, .card6, .card7 {
     overflow: hidden;
     height: 14rem;
     width: 10rem;
@@ -1972,6 +1972,92 @@ button {
             clip-path: polygon(39% 0, 49% 51%, 49% 51%, 57% 0);
     opacity: 0;
   }
+}
+
+.card7 {
+  background-color: transparent;
+  -webkit-perspective: 800px;
+          perspective: 800px;
+  border: none;
+  z-index: 1;
+}
+
+.card7_container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  border-radius: 10px;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.card7_container:hover {
+  -webkit-transform: rotate3d(-1, 1, 0, 180deg);
+          transform: rotate3d(-1, 1, 0, 180deg);
+}
+
+.card7_front, .card7_back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  text-align: center;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-box-shadow: 3px 3px 8px rgba(5, 5, 5, 0.4);
+          box-shadow: 3px 3px 8px rgba(5, 5, 5, 0.4);
+  -webkit-transition: -webkit-box-shadow 1s;
+  transition: -webkit-box-shadow 1s;
+  transition: box-shadow 1s;
+  transition: box-shadow 1s, -webkit-box-shadow 1s;
+}
+
+.card7_front {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#efa0cb), color-stop(#64a95b), to(#187019));
+  background-image: linear-gradient(to right bottom, #efa0cb, #64a95b, #187019);
+  background-size: 20rem;
+  background-position: bottom;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card7_back {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#7f87b4), color-stop(#8b528b), to(#3d1839));
+  background-image: linear-gradient(to right bottom, #7f87b4, #8b528b, #3d1839);
+  color: white;
+  -webkit-transform: rotate3d(-1, 1, 0, 180deg);
+          transform: rotate3d(-1, 1, 0, 180deg);
 }
 
 .wishes {
