@@ -798,6 +798,7 @@ width: 95%;
     height: 100%;
     padding: 2rem;
     // box-shadow: 0px 5px 10px rgba(5, 5, 5, 0.2);
+    backface-visibility: hidden;
     border-radius: 10px;
     transition: transform 1s;
     transform-style: preserve-3d;
@@ -807,9 +808,9 @@ width: 95%;
   }
   
   .card7_container:hover {
-    // transform: rotateY(180deg) ;
+    transform: rotateY(180deg) ;
     transform: rotate3d(-1, 1, 0, 180deg);
-    // backface-visibility: hidden;
+    backface-visibility: hidden;
     // box-shadow: 0px -5px 10px rgba(5, 5, 5, 0.2);
   }
   .card7_front, .card7_back {
@@ -826,9 +827,9 @@ width: 95%;
   }
   .card7_front {
     background-image: linear-gradient(to right bottom,
-    rgb(239, 160, 203), 
-    rgb(100, 169, 91), 
-    rgb(24, 112, 25));
+    rgb(160, 239, 223), 
+    rgb(91, 169, 137), 
+    rgb(13, 92, 75));
     // background-image: url("../assets/icons/Plant_cell2-seamless.png");
     background-size: 20rem;
     background-position: bottom;
