@@ -26,7 +26,7 @@
     color: $green-bright;
     font-size: 1.7rem;
     font-weight: 500;
-    // cursor: pointer;
+    cursor: pointer;
     transition: all 0.8s;
 z-index: 1;
 
@@ -42,7 +42,7 @@ z-index: 1;
       -2px -2px 8px $bright-color2,
       2px -2px 8px $bright-color2,
       -2px 2px 8px $bright-color2;
-      cursor: none;
+      cursor: pointer;
     }
 
     &::after{

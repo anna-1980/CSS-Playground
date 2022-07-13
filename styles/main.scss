@@ -23,19 +23,34 @@ html{
     font-family: Arial;
 }
 
-.pointer{
+.pointer, .pointer2, .pointer3{
     position: absolute;
-    height: 4rem;
-    width: 4rem;
-    border: 3px solid rgba(175, 63, 185, 0.5);
+    height: 3rem;
+    width: 3rem;
+    
     border-radius: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 0px 0px 4px $bright-color2;
+    // box-shadow: 0px 0px 4px $bright-color2;
     pointer-events: none;
     transform-origin: 100% 100%;
-    z-index: 30;
+    z-index:10;
   }
- 
+
+ .pointer{
+    border: 3px solid rgba(175, 63, 185, 0.5);
+ }
+  
+ .pointer2{
+    opacity: 0.8;
+    transition: all 0.3s;
+    border: 3px solid rgba(185, 63, 122, 0.5);
+ }
+ .pointer3{
+    opacity: 0.4;
+    transition: all 0.6s;
+    border: 3px solid rgba(177, 185, 63, 0.5);
+ }
+
 p{
     padding: 0.3rem;
     font-size: 1.5rem;

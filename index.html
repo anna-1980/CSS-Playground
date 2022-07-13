@@ -22,8 +22,28 @@
 <meta property='og:type' content='website' >
 </head>
 
+<div class="pointer" ></div>
+<div class="pointer2" ></div>
+<div class="pointer3" ></div>
 <body>
-  <div class="pointer"></div>
+  <script>
+    let mousePointer = document.querySelector('.pointer');
+    let mousePointer2 = document.querySelector('.pointer2');
+    let mousePointer3 = document.querySelector('.pointer3');
+    window.addEventListener('mouseover', pointer);
+    
+    function pointer(e){
+      console.log(e)
+      console.log(e.pageY)
+      console.log(e.pageX)
+      mousePointer.style.top = e.pageY + 'px';
+      mousePointer.style.left = e.pageX + 'px';
+      mousePointer2.style.top = e.pageY + 'px';
+      mousePointer2.style.left = e.pageX + 'px';
+      mousePointer3.style.top = e.pageY + 'px';
+      mousePointer3.style.left = e.pageX + 'px';
+    }
+  </script>
   <nav class="navMain">
     <div class="navigation">
         <a href='./index.html'><button class='link active buttonNav'>Home</button></a>
@@ -62,17 +82,8 @@
   </div>
 
 </div>
-<script>
-  let mousePointer = document.querySelector(".pointer");
-  window.addEventListener('mouseover', pointer)
-
-  function pointer(e){
-    // console.log(e)
-    mousePointer.style.top = e.pageY + 'px';
-    mousePointer.style.left = e.pageX + 'px';
-  }
-</script>
 </body>
+
 
 <footer>
   <a href='https://www.anna-zdyb.com/'><button id="backToMyWeb" class='link buttonNav' target="_blank">Back to my website</button></a>
