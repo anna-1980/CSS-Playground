@@ -211,6 +211,14 @@ button{
     margin-top: 1rem;
     color: #98a4ac;
     border: 1px solid #98a4ac;
+    transition: all 0.8s;
+   
+    transform-origin: 100% 100%;
+}
+
+.absolute{
+   
+    background-color: white;
 }
 
 @media  screen and (max-width: 500px) {

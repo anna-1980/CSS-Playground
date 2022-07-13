@@ -26,24 +26,7 @@
 <div class="pointer2" ></div>
 <div class="pointer3" ></div>
 <body>
-  <script>
-    let mousePointer = document.querySelector('.pointer');
-    let mousePointer2 = document.querySelector('.pointer2');
-    let mousePointer3 = document.querySelector('.pointer3');
-    window.addEventListener('mouseover', pointer);
-    
-    function pointer(e){
-      console.log(e)
-      console.log(e.pageY)
-      console.log(e.pageX)
-      mousePointer.style.top = e.pageY + 'px';
-      mousePointer.style.left = e.pageX + 'px';
-      mousePointer2.style.top = e.pageY + 'px';
-      mousePointer2.style.left = e.pageX + 'px';
-      mousePointer3.style.top = e.pageY + 'px';
-      mousePointer3.style.left = e.pageX + 'px';
-    }
-  </script>
+
   <nav class="navMain">
     <div class="navigation">
         <a href='./index.html'><button class='link active buttonNav'>Home</button></a>
@@ -83,10 +66,46 @@
 
 </div>
 </body>
+<script type="text/javascript">
+  window.onload = function() {
+  const mousePointer = document.querySelector('.pointer');
+  const mousePointer2 = document.querySelector('.pointer2');
+  const mousePointer3 = document.querySelector('.pointer3');
+  const sticky = document.querySelector('.backToMyWeb');
 
+ 
+  sticky.addEventListener('mouseover', (e) => {
+    console.log('back to my web' + e.pageY + ' web'+ e.pageX);
+    // let posY = (e.pageY - 300) + "px";
+    // sticky.style.WebkitTransform = "translateY(5px)"; 
+    sticky.classList.add("absolute");
+    sticky.style.top = (e.pageX - 300 )+ 'px';
+    sticky.style.right = (e.pageY - 320) + 'px';
+    sticky.innerText = " catch me\n to return to my website"
+  })
+  // console.log(sticky)
+  sticky.addEventListener('click', (e) => {
+    // sticky.style.WebkitTransform = "translateY(-2px)"; 
+    sticky.classList.remove("absolute");
+    console.log("mouse out");
+  })
+  console.log(sticky);
+  console.log(sticky.innerText);
+  window.addEventListener('mouseover', pointer);
+  
+  function pointer(e){
+    mousePointer.style.top = e.pageY + 'px';
+    mousePointer.style.left = e.pageX + 'px';
+    mousePointer2.style.top = e.pageY + 'px';
+    mousePointer2.style.left = e.pageX + 'px';
+    mousePointer3.style.top = e.pageY + 'px';
+    mousePointer3.style.left = e.pageX + 'px';
+  }
+}
+</script>
 
 <footer>
-  <a href='https://www.anna-zdyb.com/'><button id="backToMyWeb" class='link buttonNav' target="_blank">Back to my website</button></a>
+  <a href='https://www.anna-zdyb.com/'><button id="backToMyWeb"  class='link buttonNav backToMyWeb' target="_blank">Back to my website</button></a>
 </footer>
 </html>
  
