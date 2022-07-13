@@ -3973,6 +3973,14 @@ i:hover {
   margin-top: 1rem;
   color: #98a4ac;
   border: 1px solid #98a4ac;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+  -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+}
+
+.absolute {
+  background-color: white;
 }
 
 @media screen and (max-width: 500px) {
