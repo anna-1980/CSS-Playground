@@ -898,6 +898,7 @@ button {
   color: #a7d7cc;
   font-size: 1.7rem;
   font-weight: 500;
+  cursor: pointer;
   -webkit-transition: all 0.8s;
   transition: all 0.8s;
   z-index: 1;
@@ -909,7 +910,7 @@ button {
   border-radius: 20px;
   -webkit-box-shadow: 2px 2px 8px #d5e5ee, -2px -2px 8px #d5e5ee, 2px -2px 8px #d5e5ee, -2px 2px 8px #d5e5ee;
           box-shadow: 2px 2px 8px #d5e5ee, -2px -2px 8px #d5e5ee, 2px -2px 8px #d5e5ee, -2px 2px 8px #d5e5ee;
-  cursor: none;
+  cursor: pointer;
 }
 
 .buttonNav::after {
@@ -3792,20 +3793,35 @@ html {
   font-family: Arial;
 }
 
-.pointer {
+.pointer, .pointer2, .pointer3 {
   position: absolute;
-  height: 4rem;
-  width: 4rem;
-  border: 3px solid rgba(175, 63, 185, 0.5);
+  height: 3rem;
+  width: 3rem;
   border-radius: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  -webkit-box-shadow: 0px 0px 4px #d5e5ee;
-          box-shadow: 0px 0px 4px #d5e5ee;
   pointer-events: none;
   -webkit-transform-origin: 100% 100%;
           transform-origin: 100% 100%;
-  z-index: 30;
+  z-index: 10;
+}
+
+.pointer {
+  border: 3px solid rgba(175, 63, 185, 0.5);
+}
+
+.pointer2 {
+  opacity: 0.8;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border: 3px solid rgba(185, 63, 122, 0.5);
+}
+
+.pointer3 {
+  opacity: 0.4;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+  border: 3px solid rgba(177, 185, 63, 0.5);
 }
 
 p {
