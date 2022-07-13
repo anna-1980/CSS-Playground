@@ -28,7 +28,7 @@ $borderRadius: 10px;
   // border: 2px solid green;
 }
 
-.card1, .card2, .card3, .card4, .card5, .card6, .card7{
+.card1, .card2, .card3, .card4, .card5, .card6, .card7, .card8{
   height: $cardHeight;
   width: $cardWidth;
   padding: $paddingLeft $paddingRight;
@@ -368,9 +368,9 @@ width: 95%;
 }
 .card4_front {
   background-image: linear-gradient(to right bottom,
-  rgb(226, 136, 248), 
-  rgb(206, 101, 204), 
-  rgb(103, 5, 93));
+  rgb(173, 120, 202), 
+  rgb(172, 92, 170), 
+  rgb(88, 38, 83));
   // background-image: url("../assets/icons/Plant_cell2-seamless.png");
   background-size: 20rem;
   background-position: bottom;
@@ -691,7 +691,7 @@ width: 95%;
 }
 
 @media screen and (max-width: 360px) {
-  .card1, .card2, .card3, .card4, .card5, .card6, .card7{
+  .card1, .card2, .card3, .card4, .card5, .card6, .card7, .card8{
     overflow: hidden;
     height: 14rem;
     width: 10rem;
@@ -784,7 +784,7 @@ width: 95%;
   
   }
 
-
+//-------card 7 -------//
   .card7 {
     background-color: transparent;
     perspective: 800px;
@@ -848,3 +848,77 @@ width: 95%;
    
     // transform: rotateY(180deg) rotateZ(-180deg);
   }
+
+//-------card 8 -------//
+.card8 {
+  background-color: transparent;
+  perspective: 800px;
+  border: none;
+  z-index: 1;
+}
+
+.card8_container{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  // box-shadow: 0px 5px 10px rgba(5, 5, 5, 0.2);
+  backface-visibility: hidden;
+  border-radius: 10px;
+  transition: transform 1s;
+  transform: rotateY(95deg);
+  transform-style: preserve-3d;
+  transform-origin: left;
+  // transform-origin: 20% 20%;
+
+}
+
+.card8_container:hover {
+  transform: rotateY(0deg) ;
+  // transform: rotate3d(0, 1, 0, -90);
+  backface-visibility: hidden;
+  // box-shadow: 0px -5px 10px rgba(5, 5, 5, 0.2);
+
+}
+.card8_front, .card8_back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  text-align: center;
+  // backface-visibility: hidden;
+  box-shadow: 3px 3px 8px rgba(5, 5, 5, 0.4);
+  transition: box-shadow 1s;
+}
+.card8_front {
+  background-image: linear-gradient(to right bottom,
+  rgb(160, 205, 239), 
+  rgb(91, 160, 169), 
+  rgb(13, 50, 92));
+  // background-image: url("../assets/icons/Plant_cell2-seamless.png");
+  background-size: 20rem;
+  background-position: bottom;
+  color: black;
+  @include flex(column, center, center);
+  transform-origin: right;
+}
+
+.card8_back {
+  @include flex(column, space-around, center);
+  background-image: linear-gradient(to right bottom, 
+  rgb(127, 135, 180), 
+  rgb(139, 82, 139), 
+  rgb(61, 24, 57));
+  color: white;
+  
+  transform-origin: left;
+  // transform: rotate(150deg);
+  transform: rotate3d(0, 1, 0, 90deg);
+  // transform: rotateZ(180deg);
+  // transform: rotateY(180deg) rotateZ(-180deg);
+  div{
+    transform: rotateY(180deg);
+  }
+}

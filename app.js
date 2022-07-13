@@ -52,15 +52,7 @@ function(){
 }
 )
 
-/// Eggs
 
-console.log(egg1)
-egg1.addEventListener('click',function(){
-  console.log("egg1 clicked on")
-  // spots1.classList.toggle("spots1");
-});
-
-///eggs
 
 
 
